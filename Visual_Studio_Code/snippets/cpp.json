@@ -1,0 +1,147 @@
+{
+	// Place your snippets for cpp here. Each snippet is defined under a snippet name and has a prefix, body and
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
+	// same ids are connected.
+	// Start a project =================================================================================================
+	"The start of the script": {
+		// A quick beginning for a short C++ script.
+		"prefix": ["cpp", "start"],
+		"body": [
+			"#include <iostream>\n",
+			"int main()",
+			"{",
+			"    $0",
+			"    return 0;",
+			"}"
+		],
+		"description": "The start of a C++ script."
+	},
+	"Program arguments": {
+		// Pass arguments to the program.
+		"prefix": "argcv",
+		"body": "int argc, char *argv[]",
+		"description": "Argument count, and argument vector"
+	},
+	// Region statements ===============================================================================================
+	"Region": {
+		"prefix": "region",
+		"body": "#pragma region ${1:Region_Name}\n\n$0\n\n#pragma endregion $1",
+		"description": "Make a folding region."
+	},
+	// Headers and includes ============================================================================================
+	"Start header": {
+		// Start a header file properly.
+		"prefix": "start-h",
+		"body": "#pragma once",
+		"description": "Tell the compiler only to include the header once."
+	},
+	"Preprocessor directive for header files": {
+		// Instruct the compiler not to compile this header twice.
+		"prefix": "preprocessor",
+		"body": [
+			"// Preprocessor directive:",
+			"#ifndef ${TM_FILENAME_BASE/[-.]/_/g}_H",
+			"#define ${TM_FILENAME_BASE/[-.]/_/g}_H",
+			"\n${TM_SELECTED_TEXT}$0\n",
+			"#endif"
+		],
+		"description": "Instruct the compiler not to compile this header twice."
+	},
+	"Clock library": {
+		// The libraries for sleep() for Windows and Unix-based OS's.
+		"prefix": "clocklib",
+		"body": [
+			"#ifdef _WIN32",
+			"#include <Windows.h>",
+			"#else",
+			"#include <unistd.h>",
+			"#endif"
+		],
+		"description": "Include the libraries to use sleep()"
+	},
+	// Functions =======================================================================================================
+	"Functions": {
+		// A basic function.
+		"prefix": "function",
+		"body": [
+			"${2:/* Return type */} ${3:/* Name */}(${4:/* Parameters */})",
+			"{\n    ${TM_SELECTED_TEXT}$0\n}",
+		],
+		"description": "The basics of a function"
+	},
+	// Branching =======================================================================================================
+	"If inline statement": {
+		// An inline if statement for simpler conditions.
+		"prefix": "ifinline",
+		"body": "if (${1:/* Condition */}) $0;",
+		"description": "An inline if statement"
+	},
+	"Switch statement": {
+		// A better switch statement.
+		"prefix": "switch",
+		"body": [
+			"switch (${1:/* Switch On */})\n{",
+			"    case ${2:Value}:",
+			"        $0",
+			"        break;\n",
+			"    default:",
+			"        break;\n}"
+		],
+		"description": "A better switch statement."
+	},
+	// Looping =========================================================================================================
+	"For loop": {
+		// A for loop.
+		"prefix": "for",
+		"body": [
+			"for (int ${2:i} = ${3:Value}; $2 ${4|<,>,<=,>=,=,!=|} ${5:Test_Value}; $2${6|++,--|})",
+			"{\n    ${TM_SELECTED_TEXT}$0\n}",
+		],
+		"description": "A for loop."
+	},
+	// Classes =========================================================================================================
+	"Class": {
+		// A class to define objets.
+		"prefix": "class",
+		"body": [
+			"class ${1:Class name}\n{",
+			"// Attributes:",
+			"    ${2:Define attributes}",
+			"public:",
+			"    $1(${3:parameters});",
+			"    ~$1();\n};\n",
+			"// Constructor and destructor definitions:",
+			"$1::$1($3)",
+			"{\n    $0\n}",
+			"$1::~$1() {}"
+		],
+		"description": "Create a class to define an object."
+	},
+	// Pre-made code ===================================================================================================
+	"Swap integers": {
+		// Swap integer values without using a 3rd variable.
+		"prefix": "swapint",
+		"body": [
+			"// Swap integers w/o 3rd variable.",
+			"${1:a} = $1 + ${2:b};",
+			"$2 = $1 - $2;",
+			"$1 = $1 - $2;"
+		],
+		"description": "Swap ints with/o 3rd variable."
+	},
+	"Format strings on console": {
+		// Only use escape sequences if the stream is a console.
+		"prefix": "defcprty",
+		"body": [
+			"// Only print escape sequence to format output if the output is a console.",
+			"string cprty (const string &formatting)",
+			"{",
+			"    if (!isatty(fileno(stdout)))",
+			"        return \"\";",
+			"    return \"\\e[\" + formatting + \"m\";",
+			"}"
+		],
+		"description": "Only print ASCII escape sequences if the output is a console."
+	}
+}

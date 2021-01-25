@@ -1,0 +1,230 @@
+{
+    // Privacy settings:
+    "telemetry.enableTelemetry": false,
+    // Terminal settings:
+    "terminal.integrated.cursorStyle": "line",
+    "terminal.integrated.cwd": "${fileDirname}",
+    "terminal.integrated.shell.windows": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
+    // "terminal.integrated.fontFamily": "PowerlineSymbols, monospace",
+    "terminal.integrated.fontFamily": "Hack, monospace",
+    "settingsSync.ignoredSettings": [
+        "terminal.integrated.fontFamily"
+    ],
+    // Debugger settings:
+    "debug.onTaskErrors": "abort",
+    "debug.console.closeOnEnd": true,
+    "debug.toolBarLocation": "docked",
+    "debug.openDebug": "openOnSessionStart",
+    "debug.openExplorerOnEnd": true,
+    "terminal.external.windowsExec": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
+    // Practical settings:
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "breadcrumbs.enabled": true,
+    // Window & Layout
+    "window.zoomLevel": -1,
+    // Editor
+    // "editor.fontFamily": "Cascadia ,'Cascadia Code', monospace",
+    "editor.fontSize": 12,
+    "editor.minimap.enabled": true,
+    "editor.tabCompletion": "on",
+    "editor.padding.bottom": 40,
+    "editor.renderControlCharacters": false,
+    "editor.renderLineHighlight": "all",
+    "editor.rulers": [
+        78,
+        120
+    ],
+    "editor.showFoldingControls": "always",
+    "editor.scrollBeyondLastLine": false,
+    "editor.cursorSmoothCaretAnimation": true,
+    "editor.smoothScrolling": true,
+    "editor.renderWhitespace": "trailing",
+    // Workbench
+    "workbench.colorTheme": "One Dark Pro",
+    "workbench.editor.restoreViewState": false,
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.statusBar.visible": true,
+    "workbench.startupEditor": "none",
+    // "workbench.panel.defaultLocation": "bottom",
+    // File settings:
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 5000,
+    "files.eol": "\n", // Defaul end of line. (LF)
+    "files.insertFinalNewline": true,
+    "files.associations": {
+        // "*.desktop": "properties" // Define .desktop syntax highlighting.
+        // "*.vdproj": "json" // Treat it as a JSON file
+    },
+    "files.exclude": {
+        "**/.git": true,
+        "**/.~*": true,
+        "**/*.db": true,
+        "**/*.ini": true,
+        "**/*.url": true
+    },
+    // By-Language settings:
+    "[java]": {
+        "editor.rulers": [
+            78,
+            128
+        ],
+    },
+    "[html]": {
+        "editor.tabSize": 2
+    },
+    "[csharp]": {
+        "editor.rulers": [
+            78,
+            132
+        ],
+        "editor.codeLens": false
+    },
+    "[makefile]": {
+        "editor.insertSpaces": false,
+        "editor.tabSize": 2
+    },
+    "[plaintext]": {
+        "editor.tabSize": 2,
+    },
+    "[reg]": {
+        "editor.tabSize": 2,
+    },
+    // Git Settings:
+    "git.confirmSync": false,
+    "git.autofetch": true,
+    // Ignore extensions.
+    "settingsSync.ignoredExtensions": [
+        "ms-vscode-remote.remote-wsl",
+        "ms-vscode.powershell",
+        "dbaeumer.vscode-eslint"
+    ],
+    // Shell launcher extension settings:
+    "shellLauncher.shells.windows": [
+        {
+            "shell": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
+            "label": "PowerShell 7",
+            "launchName": "pwsh"
+        },
+        {
+            "shell": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+            "label": "Windows PowerShell",
+            "launchName": "Win PowerShell"
+        },
+        {
+            "shell": "C:\\Windows\\System32\\cmd.exe",
+            "label": "cmd"
+        },
+        {
+            "shell": "C:\\Program Files\\Git\\bin\\bash.exe",
+            "label": "Git bash"
+        },
+        {
+            "shell": "C:\\Windows\\System32\\bash.exe",
+            "label": "WSL Bash"
+        }
+    ],
+    "shellLauncher.shells.linux": [
+        {
+            "shell": "/bin/zsh",
+            "label": "zsh"
+        },
+        {
+            "shell": "/bin/bash",
+            "label": "bash"
+        },
+        {
+            "shell": "zsh",
+            "args": [
+                "-l"
+            ],
+            "label": "zsh login shell"
+        },
+        {
+            "shell": "bash",
+            "args": [
+                "-l"
+            ],
+            "label": "bash login shell"
+        },
+        {
+            "shell": "/usr/bin/python3",
+            "args": [
+                "-q"
+            ],
+            "label": "Python 3"
+        }
+    ],
+    // BashIDE extension settings:
+    "bashIde.explainshellEndpoint": "http://localhost:5000",
+    // GitLens extension settings:
+    "gitlens.codeLens.enabled": false,
+    "gitlens.currentLine.enabled": false,
+    "gitlens.hovers.currentLine.over": "line",
+    "gitlens.statusBar.format": "${author, }${agoOrDate}${' via 'pullRequest}${ • message|50?}",
+    "gitlens.views.branches.files.layout": "tree",
+    "gitlens.views.commits.files.layout": "tree",
+    "gitlens.views.contributors.files.layout": "tree",
+    "gitlens.views.remotes.files.layout": "tree",
+    "gitlens.views.searchAndCompare.files.layout": "tree",
+    "gitlens.views.tags.files.layout": "tree",
+    "gitlens.codeLens.scopes": [
+        "document",
+        "containers"
+    ],
+    // PowerShell extension settings:
+    "powershell.powerShellDefaultVersion": "PowerShell (x64)",
+    "workbench.activityBar.visible": true,
+    "diffEditor.renderSideBySide": false,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "java.configuration.checkProjectSettingsExclusions": false,
+    // Python extension settings:
+    "python.languageServer": "Pylance",
+    "python.showStartPage": false,
+    // RemoteSSH extension settings:
+    "remote.SSH.configFile": "/home/nicolas/.ssh/vs_config",
+    // Todo tree extensions settings:
+    "todo-tree.tree.showScanModeButton": false,
+    // Vim emulation extension settings:
+    "vim.disableExtension": true,
+    "vim.easymotion": true,
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
+    "vim.insertModeKeyBindings": [
+        {
+            "before": [ "j", "j" ],
+            "after": [ "<Esc>" ]
+        }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [ "<leader>", "d" ],
+            "after": [ "d", "d" ]
+        },
+        {
+            "before": [ "<C-n>" ],
+            "commands": [ ":nohl" ]
+        }
+    ],
+    "vim.leader": "<space>",
+    "vim.handleKeys": {
+        "<C-a>": false,
+        "<C-f>": false
+    },
+    "gitlens.gitCommands.skipConfirmations": [
+        "fetch:command",
+        "stash-push:command",
+        "switch:command",
+        "branch-create:command"
+    ],
+    /* // Powermode extension:
+    "powermode.comboThreshold": 20,
+    "powermode.comboTimeout": 5,
+    "powermode.enabled": true,
+    "powermode.enableShake": false,
+    "powermode.enableStatusBarComboCounter": false,
+    "powermode.enableStatusBarComboTimer": false */
+}

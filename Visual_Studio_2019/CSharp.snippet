@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="https://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>Make Property</Title>
+            <Author>nico-castell</Author>
+            <Description>Quickly create a property</Description>
+            <Shortcut>mkprop</Shortcut>
+        </Header>
+        <Snippet>
+            <Code Language="CSharp">
+                <![CDATA[public $type$ $name$ { get; set; }$end$]]>
+            </Code>
+            <Declarations>
+                <Literal>
+                    <ID>type</ID>
+                    <Tooltip>The variable type</Tooltip>
+                    <Default>int</Default>
+                </Literal>
+                <Literal>
+                    <ID>name</ID>
+                    <Tooltip>The name of the property</Tooltip>
+                    <Default>Kites</Default>
+                </Literal>
+            </Declarations>
+        </Snippet>
+    </CodeSnippet>
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>Make a list</Title>
+            <Author>nico-castell</Author>
+            <Description>Quickly make a List</Description>
+            <Shortcut>mklist</Shortcut>
+        </Header>
+        <Snippet>
+            <Code Language="CSharp">
+                <![CDATA[List<$type$> $name$ = new List<$type$>() { $end$ };]]>
+            </Code>
+            <Declarations>
+                <Literal>
+                    <ID>type</ID>
+                    <Tooltip>The variable type</Tooltip>
+                    <Default>int</Default>
+                </Literal>
+                <Literal>
+                    <ID>name</ID>
+                    <Tooltip>The name of the list</Tooltip>
+                    <Default>Ints</Default>
+                </Literal>
+            </Declarations>
+            <Imports>
+                <Import>
+                    <Namespace>System.Collections.Generic</Namespace>
+                </Import>
+            </Imports>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>

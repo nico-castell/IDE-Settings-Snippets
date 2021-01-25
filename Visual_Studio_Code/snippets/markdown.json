@@ -1,0 +1,29 @@
+{
+	// Place your snippets for markdown here. Each snippet is defined under a snippet name and has a prefix, body and
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
+	// same ids are connected.
+	// Usual writing for GitHub ========================================================================================
+	"Block of code": {
+		// Input a block of code in a markdown file.
+		"prefix": "code",
+		"body": [
+			"```${1|bash,c,cpp,csharp,go,html,http,java,javascript,json,makefile,markdown,powershell,php,python,shell,sql,xml,yaml|}",
+			"${TM_SELECTED_TEXT}$0",
+			"```"
+		],
+		"description": "Input a block of code."
+	},
+	"Repo licensing": {
+		// Choose between licenses.
+		"prefix": "repolicense",
+		"body": "## License\n\nThis repository is available under the ${1|[MIT License](LICENSE),[BSD-2-Clause License](LICENSE),[BSD-3-Clause](LICENSE),[Apache License\\, version 2](LICENSE),[GNU GPL 3.0](LICENSE)|}.",
+		"description": "Choose a license to show in a README.md file"
+	},
+	// Regions =========================================================================================================
+	"Region": {
+		"prefix": "region",
+		"body": "<!--#region ${1:Region_Name} -->\n\n$0\n\n<!--#endregion $1 -->",
+		"description": "Make a folding region."
+	}
+}

@@ -1,0 +1,19 @@
+{
+	// Place your snippets for python here. Each snippet is defined under a snippet name and has a prefix, body and
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
+	// same ids are connected.
+	// Start a project =================================================================================================
+	"Shebang": {
+		// Tell the OS how to interpret the file:
+		"prefix": [ "shebang", "binpython" ],
+		"body": "${1|#!/usr/bin/python3,#!/usr/bin/python,#!/bin/python3,#!/bin/python|}",
+		"description": "Tell the OS how to interpret the file"
+	},
+	// Regions =========================================================================================================
+	"Region": {
+		"prefix": "region",
+		"body": "#region ${1:Region_Name}\n\n$0\n\n#endregion $1",
+		"description": "Make a folding region."
+	}
+}

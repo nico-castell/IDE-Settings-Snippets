@@ -1,0 +1,29 @@
+{
+	// Place your snippets for plaintext here. Each snippet is defined under a snippet name and has a prefix, body and
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
+	// same ids are connected.
+	// Starting a file =================================================================================================
+	"Start": {
+		// To begin taking notes for a class.
+		"prefix": "start",
+		"body": [
+			"==================================================",
+			"  $CURRENT_DAY_NAME ${CURRENT_MONTH_NAME} ${CURRENT_DATE}, $CURRENT_YEAR",
+			"  $TM_SELECTED_TEXT$1",
+			"==================================================",
+			"\n$0"
+		],
+		"description": "Begin taking notes for a class"
+	},
+	"Titles": {
+		// Titles for plain text.
+		"prefix": "title",
+		"body": [
+			"========================================================================================================================",
+			"${1:Title}",
+			"\n  ${TM_SELECTED_TEXT}$0"
+		],
+		"description": "Title separator"
+	}
+}

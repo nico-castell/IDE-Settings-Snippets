@@ -1,0 +1,60 @@
+{
+	// Place your snippets for powershell here. Each snippet is defined under a snippet name and has a prefix, body and
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
+	// same ids are connected.
+	// Start a project =================================================================================================
+	"Help": {
+		// To quickly create a help section.
+		"prefix": "help",
+		"body": [
+			"$BLOCK_COMMENT_START",
+			"    .SYNOPSIS",
+			"        ${1:This script does...}",
+			"    .DESCRIPTION",
+			"        ${2:This script edits ____ in ____ to ____.}",
+			"    .PARAMETER ${3:Parameter1}",
+			"        ${4: This is a string/boolean/etc.. that...}",
+			"    .EXAMPLE",
+			"        '$TM_FILENAME' -${3:Parameter1}",
+			"    .NOTES",
+			"        Author: ${5:Author's name}",
+			"$BLOCK_COMMENT_END",
+			"${LINE_COMMENT} This script was written by ${5:Author's name}.",
+			"$0"
+		],
+		"description": "Help block for PowerShell Get-Help"
+	},
+	// Regions =========================================================================================================
+	"Region": {
+		"prefix": "region",
+		"body": "#region ${1:Region_Name}\n\n$0\n\n#endregion $1",
+		"description": "Make a folding region."
+	},
+	// Pre-made code ===================================================================================================
+	"AdminCheck": {
+		// To quickly create a check for admin privileges on windows.
+		"prefix": "admincheck",
+		"body": [
+			"${LINE_COMMENT} This part of the script checks and asks for admin permissions.",
+			"if (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]'Administrator')) {\n",
+			"    Write-Host 'This script needs admin privileges...' -ForegroundColor DarkRed",
+			"    Start-Sleep 2",
+			"    exit\n",
+			"} else {Write-Verbose -Message 'Admin privileges found.'}",
+		],
+		"description": "Admin Check"
+	} /* ,
+	"Timer" : {
+		// To quickly create a timer.
+		"prefix": "timer",
+		"body": [
+			"for ($Seconds = ${1:10}; $Seconds -gt -1; $Seconds--) {",
+			"    Write-Host -NoNewline ("`rSeconds remaining: " + ("{0:d2}" -f $Seconds))",
+			"    Start-Sleep -Seconds 1",
+			"}",
+			"Write-Host """
+		],
+		"description": "Timer"
+	} */
+}

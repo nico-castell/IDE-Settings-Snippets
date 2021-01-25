@@ -1,0 +1,251 @@
+{
+	// Place your snippets for shellscript here. Each snippet is defined under a snippet name and has a prefix, body and
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
+	// same ids are connected.
+	// Common code =====================================================================================================
+	"bin-bash": {
+		// Shebang for a bash script.
+		"prefix": [ "binbash", "binsh", "shebang" ],
+		"body": "${1|#!/bin/bash,#!/bin/sh,#!/usr/bin/bash,#!/usr/bin/sh|}",
+		"description": "Start of a bash script."
+	},
+	// Branching =======================================================================================================
+	"If statement": {
+		// A simple if statement.
+		"prefix": "if",
+		"body": [
+			"if [ ${1:Test} ]; then",
+			"    ${TM_SELECTED_TEXT}$0",
+			"fi"
+		],
+		"description": "A simple if statement."
+	},
+	"Inline if statement": {
+		// An inline if statement.
+		"prefix": "ifinline",
+		"body": "if [ ${1:Test} ]; then ${TM_SELECTED_TEXT}$2; fi",
+		"description": "A super simple if statement that only takes one line."
+	},
+	"If Reply statement": {
+		// An inline if reply statement.
+		"prefix": [ "ifreply", "reply" ],
+		"body": [
+			"read -p \"${1:Prompt} ${2|(Y/n),(y/N)|} \"",
+			"if [[ \\${REPLY,,} == \"y\" ]]${3| \\|\\| [[ -z $REPLY ]]; then,;then|}",
+			"    ${TM_SELECTED_TEXT}$0",
+			"fi"
+		],
+		"description": "An if statement for read and reply."
+	},
+	"If completion": {
+		// Autocomplete the if statement
+		"prefix": "then",
+		"body": "then\n    $0\nfi",
+		"description": "Auto-Format"
+	},
+	"else completion": {
+		// The continuation of an if statement.
+		"prefix": "else",
+		"body": "else\n    $0\nfi",
+		"description": "Auto-Format."
+	},
+	// For loops =======================================================================================================
+	"For": {
+		// A for loop that iterates through a list.
+		"prefix": "for",
+		"body": [
+			"for ${1:i} in ${${2:LIST}[@]}; do",
+			"    ${TM_SELECTED_TEXT}$0",
+			"done"
+		],
+		"description": "A for loop for lists."
+	},
+	"For range": {
+		// A loop that iterates through the items of a range.
+		"prefix": "forr",
+		"body": [
+			"for ${1:i} in {${2:Start}..${3:End}}; do",
+			"    ${TM_SELECTED_TEXT}$0",
+			"done"
+		],
+		"description": "A foor loop for ranges."
+	},
+	"C Style for loop": {
+		// A C style loop that iterates while a condition is true.
+		"prefix": "cfor",
+		"body": [
+			"for ((${1:i} = ${2:Value}; $1 ${3|<,>,<=,>=,=,!=|} ${4:Compare}; $1${5|++,--|})); do",
+			"    ${TM_SELECTED_TEXT}$0",
+			"done"
+		],
+		"description": "A C style for loop that iterates while a condition is true."
+	},
+	"loop completion": {
+		// Autocomplete loop do; done sections
+		"prefix": "do",
+		"body": "do\n    $0\ndone",
+		"description": "Auto-Format"
+	},
+	// "While" loops ===================================================================================================
+	"While loop": {
+		// A simple while loop.
+		"prefix": "while",
+		"body": [
+			"while [ ${1:Test} ]; do",
+			"    ${TM_SELECTED_TEXT}$0",
+			"done"
+		],
+		"description": "A while loop."
+	},
+	"Options": {
+		// A while loop for passing options to the script.
+		"prefix": "options",
+		"body": [
+			"#region Options",
+			"while [ -n \"\\$1\" ]; do",
+			"    case \"\\$1\" in",
+			"        # ${3:Description}",
+			"        -${4:letter}) $0 ;;\n",
+			"        ${2|*) echo \"ERROR: Option $1 not recognized\" >&2 && exit 1 ;;,--) shift && break ;;\n\n*) echo \"ERROR: Option $1 not recognized\" >&2 && exit 1 ;;|}",
+			"esac; shift; done",
+			"#endregion Options"
+		],
+		"description": "A while loop to work the script options"
+	},
+	// Switch statements ===============================================================================================
+	"Select statement": {
+		// A select statement for choosing among options.
+		"prefix": "select",
+		"body": [
+			"select ${1:s} in ${${2:LIST}[@]} exit; do",
+			"case $$1 in",
+			"    ${3:pattern})\n    $0\n    ;;",
+			"    exit) break ;;",
+			"    *) echo \"Option $$1 not recognized.\" ;;",
+			"esac; done",
+		]
+	},
+	"Case statement": {
+		// A case statement.
+		"prefix": "case",
+		"body": [
+			"case $${1:c} in",
+			"    ${pattern})\n    $0",
+			"    ;;",
+			"esac"
+		],
+		"description": "A case statement (Best way to replace multiple ifs)"
+	},
+	"Sub-case statement": {
+		// Find a pattern in a case statement and add instructions.
+		"prefix": "subcase",
+		"body": [
+			"\n\n${1:Pattern})",
+			"${TM_SELECTED_TEXT}$0",
+			";;"
+		],
+		"description": "Find a pattern inside a case statement."
+	},
+	// Functions =======================================================================================================
+	"Function": {
+		// A function in bash syntax.
+		"prefix": "function",
+		"body": [
+			"# ${1:Description}",
+			"${2:Name} () {",
+			"    ${TM_SELECTED_TEXT}$0",
+			"}"
+		],
+		"description": "Define a bash function."
+	},
+	// Pre-made code ===================================================================================================
+	"Reply arithmetic with empty option": {
+		// Read-Reply code for multiple choices, and no choice.
+		"prefix": "replyarithmetic",
+		"body": [
+			"echo \"${1:Description} (Default: ${2:1}):\"",
+			"LIST=($3)\n",
+			"echo \"  0) `tput setaf 3`None of the following options`tput sgr0`\"",
+			"let SUBTOTAL=0",
+			"for i in ${LIST[@]}; do\n",
+			"    let SUBTOTAL++",
+			"    echo \"  \\$SUBTOTAL) `tput setaf 3`\\$i`tput sgr0`\"\n",
+			"done",
+			"unset SUBTOTAL\n",
+			"read -p \"Choose one: \"",
+			"if [ -z \\$REPLY ] || [ \\$REPLY -lt 0 ]; then REPLY=$2; fi",
+			"CHOICE=$((\\$REPLY-1))",
+			"if [ ! \"\\$REPLY\" -eq 0 ]; then ${4:Variable}=${LIST[\\$CHOICE]}; fi",
+			"if [ -z $$4 ] && [ ! \\$REPLY -eq 0 ]; then $4=${LIST[$(($2-1))]}; fi\n",
+			"if [ ! -z $$4 ]; then\n",
+			"    echo \"Option chosen: `tput setaf 3`$$4`tput sgr0`\"\n",
+			"fi"
+		],
+		"description": "A reply with arithmetic to support multiple numbered choices."
+	},
+	"Reply arithmetic without empty option": {
+		// Read-Reply code for multiple choices, and no choice.
+		"prefix": "replyarithmetic",
+		"body": [
+			"echo \"${1:Description} (Default: ${2:1}):\"",
+			"LIST=($3)\n",
+			"let SUBTOTAL=0",
+			"for i in ${LIST[@]}; do\n",
+			"    let SUBTOTAL++",
+			"    echo \"  \\$SUBTOTAL) `tput setaf 3`\\$i`tput sgr0`\"\n",
+			"done",
+			"unset SUBTOTAL\n",
+			"read -p \"Choose one: \"",
+			"if [ -z \\$REPLY ] || [ \\$REPLY -lt 1 ]; then REPLY=$2; fi",
+			"CHOICE=$((\\$REPLY-1))",
+			"${4:Variable}=${LIST[\\$CHOICE]}",
+			"if [ -z $$4 ]; then $4=${LIST[$(($2-1))]}; fi\n",
+			"echo \"Option chosen: `tput setaf 3`$$4`tput sgr0`\""
+		],
+		"description": "A reply with arithmetic to support multiple numbered choices without an empty choice."
+	},
+	"Internet Test": {
+		// Using ping and an if statement, find an internet connection.
+		"prefix": "internet",
+		"body": [
+			"# Test for an internet connection and exit if none is found.",
+			"ping -c 1 google.com &>/dev/null",
+			"if [ ! $? -eq 0 ]; then",
+			"    echo -e >&2 \"\\e[31mERROR: No internet\\e[00m\"",
+			"    exit 1",
+			"fi"
+		],
+		"description": "Test for an internet connection."
+	},
+	"Separate": {
+		// A function to separate parts of the script.
+		"prefix": "defseparate",
+		"body": [
+			"# Function to draw a line across the width of the console.",
+			"Separate () {",
+			"    if [ ! -z \\$1 ]; then tput setaf \\$1; fi",
+			"    printf \"\\n\\n%`tput cols`s\\n\" |tr \" \" \"=\"",
+			"    tput sgr0",
+			"}"
+		],
+		"description": "A function to separate parts of a script."
+	},
+	"Waiting animation": {
+		// A function to show an animation while waiting
+		"prefix": "defanimation",
+		"body": [
+			"# Show an animation while waiting for a process to finish (usage: Animate & pid=$!; kill \\$pid)",
+			"Animate() {",
+			"    CICLE=('|' '/' '-' '\\')",
+			"    while true; do",
+			"        for i in \"\\${CICLE[@]}\"; do",
+			"            printf \"%s\\r\" \\$i",
+			"            sleep 0.2",
+			"        done",
+			"    done",
+			"}"
+		],
+		"description": "Show an animation while waiting for another process to finish."
+	}
+}

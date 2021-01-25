@@ -1,0 +1,100 @@
+{
+	// Place your snippets for csharp here. Each snippet is defined under a snippet name and has a prefix, body and
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
+	// same ids are connected.
+	// Usual code ======================================================================================================
+	"Custom for loop": {
+		// A better for loop to replace the default one.
+		"prefix": "for",
+		"body": [
+			"for (int ${1:i} = ${2:0}; $1 ${3|<,>,<=,>=,=,!=|} ${4:Compare}; $1${5|++,--|})",
+			"{\n    ${TM_SELECTED_TEXT}$0\n}"
+		],
+		"description": "Superior snippet for a normal for loop."
+	},
+	"Make a list": {
+		// Snippet to quicly make a list.
+		"prefix": "mkList",
+		"body": "List<${1:type}> ${2:name} = new List<$1>() {$0};",
+		"description": "Quicly create a list."
+	},
+	"Make a property": {
+		// Quicly create a property.
+		"prefix": "mkProperty",
+		"body": "public ${1:int} ${2:Name} { get; set; }",
+		"description": "Quicly create a property."
+	},
+	// Regions =========================================================================================================
+	"Region": {
+		"prefix": "region",
+		"body": "#region ${1:Region_Name}\n\n$0\n\n#endregion $1",
+		"description": "Make a folding region."
+	},
+	// Classes =========================================================================================================
+	"Start class library": {
+		// Used when you make a new file to implement functionality in the project.
+		"prefix": "start-class",
+		"body": [
+			"using System;",
+			"using System.Collections.Generic;",
+			"using System.Text;\n",
+			"namespace ${WORKSPACE_NAME/[\\-.#$ ]/_/g}",
+			"{",
+			"    public class ${1:Name}",
+			"    {",
+			"        $0",
+			"    }",
+			"}"
+		],
+		"description": "Start a class in a new file",
+	},
+	"Default constructor": {
+		// the default constructor for a C# class.
+		"prefix": "constructor",
+		"body": [
+			"public ${ClassName}($0)",
+			"{\n}",
+		],
+		"description": "The default constructor to be filled up."
+	},
+	// Interfaces ======================================================================================================
+	"Start Interface": {
+		// Used to implement behaviours in an object.
+		"prefix": "start-interface",
+		"body": [
+			"using System;\n",
+			"namespace ${WORKSPACE_NAME/[\\-.#$ ]/_/g}",
+			"{",
+			"    public interface ${TM_FILENAME_BASE}",
+			"    {",
+			"        $0",
+			"    }",
+			"}"
+		],
+		"description": "Implement behaviour on a program using an Interface"
+	},
+	// XML IntelliSense comments =======================================================================================
+	"Make a method description": {
+		// XML description for a method.
+		"prefix": "xmlcomment",
+		"body": [
+			"/// <summary>",
+			"/// $0",
+			"/// </summary>"
+		],
+		"description": "XML Description for intelliSense."
+	},
+	"Parameter description": {
+		// Parameter description in an XML comment.
+		"prefix": "xmlparam",
+		"body": "/// <param name=\"${1:name}\">${TM_SELECTED_TEXT}$0</param>",
+		"description": "Parameter description for IntelliSense"
+	},
+	"Return descriptor": {
+		// Return description in an XML comment.
+		"prefix": "xmlreturns",
+		"body": "/// <returns>${TM_SELECTED_TEXT}$0</returns>",
+		"description": "Return description ofr IntelliSense"
+	}
+}

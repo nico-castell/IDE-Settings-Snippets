@@ -1,0 +1,30 @@
+{
+	// Place your snippets for html here. Each snippet is defined under a snippet name and has a prefix, body and
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
+	// same ids are connected.
+	// Start a project =================================================================================================
+	"HTML Shell": {
+		// The HTML Shell to start the HTML file.
+		"prefix": "html-shell",
+		"body": [
+			"<!DOCTYPE html>",
+			"<html>",
+			"  <head>",
+			"    <meta charset=\"UTF-8\">",
+			"    <title>title</title>",
+			"  </head>",
+			"  <body>",
+			"    ${TM_SELECTED_TEXT}$0",
+			"  </body>",
+			"</html>"
+		],
+		"description": "Start an HTML file."
+	},
+	// Regions =========================================================================================================
+	"Region": {
+		"prefix": "region",
+		"body": "<!--#region ${1:Region_Name} -->\n\n$0\n\n<!--#endregion $1 -->",
+		"description": "Make a folding region."
+	}
+}
