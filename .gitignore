@@ -1,0 +1,14 @@
+# Exclude windows config files, shortcuts and temporary files
+*.db
+*.ini
+*.lnk
+*.url
+~*
+
+# Exclude test and tmp files
+*test*
+*tmp*
+
+# Ignore vim files
+*~
+*.swp
