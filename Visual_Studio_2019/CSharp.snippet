@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<CodeSnippets xmlns="https://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+<CodeSnippets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema.xsd">
   <CodeSnippet Format="1.0.0">
     <Header>
-      <Title>Make Property</Title>
       <Author>nico-castell</Author>
       <Description>Quickly create a property</Description>
       <Shortcut>mkprop</Shortcut>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>Make Property</Title>
     </Header>
     <Snippet>
-      <Code Language="CSharp">
-        <![CDATA[public $type$ $name$ { get; set; }$end$]]>
-      </Code>
       <Declarations>
         <Literal>
           <ID>type</ID>
@@ -23,19 +23,27 @@
           <Default>Kites</Default>
         </Literal>
       </Declarations>
+      <Code Language="CSharp">
+        <![CDATA[public $type$ $name$ { get; set; }$end$]]>
+      </Code>
     </Snippet>
   </CodeSnippet>
   <CodeSnippet Format="1.0.0">
     <Header>
-      <Title>Make a list</Title>
       <Author>nico-castell</Author>
       <Description>Quickly make a List</Description>
       <Shortcut>mklist</Shortcut>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>Make a list</Title>
     </Header>
     <Snippet>
-      <Code Language="CSharp">
-        <![CDATA[List<$type$> $name$ = new List<$type$>() { $end$ };]]>
-      </Code>
+      <Imports>
+        <Import>
+          <Namespace>System.Collections.Generic</Namespace>
+        </Import>
+      </Imports>
       <Declarations>
         <Literal>
           <ID>type</ID>
@@ -48,11 +56,9 @@
           <Default>Ints</Default>
         </Literal>
       </Declarations>
-      <Imports>
-        <Import>
-          <Namespace>System.Collections.Generic</Namespace>
-        </Import>
-      </Imports>
+      <Code Language="CSharp">
+        <![CDATA[List<$type$> $name$ = new List<$type$>() { $end$ };]]>
+      </Code>
     </Snippet>
   </CodeSnippet>
 </CodeSnippets>

@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<CodeSnippets xmlns="https://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+<CodeSnippets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema.xsd">
   <CodeSnippet Format="1.0.0">
     <Header>
       <Author>nico-castell</Author>
       <Description>Swap integers without a buffer</Description>
       <Shortcut>swpInts</Shortcut>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
       <Title>Swap Integers</Title>
     </Header>
     <Snippet>
@@ -52,11 +55,16 @@ $selected$$end$
       <Author>nico-castell</Author>
       <Description>(LINUX) Test if stdout is a console, if it is, write ANSI escape sequence</Description>
       <Shortcut>defCprty</Shortcut>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
       <Title>Define cprty</Title>
     </Header>
     <Snippet>
       <Imports>
-        <Import>unistd.h</Import>
+        <Import>
+          <Namespace>unistd.h</Namespace>
+        </Import>
       </Imports>
       <Code Language="CPP">
         <![CDATA[// Print ANSI escape code, if output is a terminal.
@@ -74,11 +82,16 @@ std::string cprty (const std::string &formatting)
       <Author>nico-castell</Author>
       <Description>Make a vector</Description>
       <Shortcut>mkVector</Shortcut>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
       <Title>Make a vector</Title>
     </Header>
     <Snippet>
       <Imports>
-        <Import>vector</Import>
+        <Import>
+          <Namespace>vector</Namespace>
+        </Import>
       </Imports>
       <Declarations>
         <Literal>
@@ -102,11 +115,16 @@ std::string cprty (const std::string &formatting)
       <Author>nico-castell</Author>
       <Description>Define an overload for the ostream operator</Description>
       <Shortcut>defCout</Shortcut>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
       <Title>Overload the ostream operator</Title>
     </Header>
     <Snippet>
       <Imports>
-        <Import>iostream</Import>
+        <Import>
+          <Namespace>iostream</Namespace>
+        </Import>
       </Imports>
       <Declarations>
         <Literal>
@@ -133,6 +151,9 @@ std::string cprty (const std::string &formatting)
       <Author>nico-castell</Author>
       <Description>Define a function</Description>
       <Shortcut>deff</Shortcut>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
       <Title>Define function</Title>
     </Header>
     <Snippet>
@@ -161,6 +182,9 @@ std::string cprty (const std::string &formatting)
       <Author>nico-castell</Author>
       <Description>Define a templetized function</Description>
       <Shortcut>deft</Shortcut>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
       <Title>Define templetized function</Title>
     </Header>
     <Snippet>
@@ -200,10 +224,13 @@ $type$ $name$($T$ $pname$)
       <Author>nico-castell</Author>
       <Description>Pass CLI arguments to the program</Description>
       <Shortcut>argcv</Shortcut>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
       <Title>Pass arguments to main</Title>
     </Header>
     <Snippet>
-      <Code>
+      <Code Language="CPP">
         <![CDATA[int argc, char* argv[]$end$]]>
       </Code>
     </Snippet>
@@ -223,7 +250,7 @@ $type$ $name$($T$ $pname$)
           <Default>true</Default>
         </Literal>
       </Declarations>
-      <Code>
+      <Code Language="CPP">
         <![CDATA[if ($test$) $end$]]>
       </Code>
     </Snippet>
@@ -233,6 +260,9 @@ $type$ $name$($T$ $pname$)
       <Author>nico-castell</Author>
       <Description>Make a folding region</Description>
       <Shortcut>fregion</Shortcut>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
       <Title>Folding region</Title>
     </Header>
     <Snippet>
@@ -243,7 +273,7 @@ $type$ $name$($T$ $pname$)
           <Default>Does cool stuff</Default>
         </Literal>
       </Declarations>
-      <Code>
+      <Code Language="CPP">
         <![CDATA[#pragma region $name$
 $selected$$end$
 #pragma endregion]]>

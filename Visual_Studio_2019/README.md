@@ -1,5 +1,7 @@
 # 1. CodeSnippets
-Attributes: `xmlns="https://schemas.microsoft.com/VisualStudio/2005/CodeSnippet"`
+Attributes: `xmlns="https://schemas.microsoft.com/VisualStudio/2005/CodeSnippet"`.
+Though, ***Visual Studio*** doesn't really mind the attributes, as long as it's
+present.
 
 Groups many code snippets.
 
@@ -24,7 +26,7 @@ The author of the snippet, must be plain text.
 A simple description of the snippet, must be plain text.
 
 #### 4. HelpUrl
-This is not used by **Visual Studio**, but it can be used by other
+This is not used by ***Visual Studio***, but it can be used by other
 applications. Must be a URL in plain text.
 
 #### 4. Keywords
@@ -96,7 +98,7 @@ The default value of the literal. Suppose the user has to define a return
 type in the snippet, you can default it to `void` using this child.
 
 ###### 6. Function
-In some languages, this tells Visual Studio to run a function when the user
+In some languages, this tells ***Visual Studio*** to run a function when the user
 focuses on the Literal.
 
 ##### 5. Object
@@ -123,7 +125,7 @@ The default value of the literal. Suppose the user has to define a return
 type in the snippet, you can default it to `void` using this child.
 
 ###### 6. Function
-In some languages, this tells Visual Studio to run a function when the user
+In some languages, this tells ***Visual Studio*** to run a function when the user
 focuses on the Object.
 
 #### 4. Code
@@ -140,7 +142,7 @@ the actual code for the snippet. Like so:
 
 There are two predefined $literals$:
 
-* `$end$`: Used to tell Visual Studio where to place the cursor after it
+* `$end$`: Used to tell ***Visual Studio*** where to place the cursor after it
 finished with the snippet. (Psst... **always** use it.)
-* `$selected$`: Used to tell Visual Studio to replace this with the selected
+* `$selected$`: Used to tell ***Visual Studio*** to replace this with the selected
 text when surrounding with a snippet.
