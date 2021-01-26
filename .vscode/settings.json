@@ -1,0 +1,11 @@
+// Workspace settings
+{
+    "files.associations": {
+        "*.snippet": "xml"
+        // With this, when you create a .snippet file, vscode uses XML format
+    },
+    "[xml]": {
+        "editor.tabSize": 2,
+        "editor.defaultFormatter": "redhat.vscode-xml"
+    }
+}

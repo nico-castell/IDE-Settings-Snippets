@@ -1,0 +1,7 @@
+// These are XML formatting extensions
+{
+    "recommendations": [
+        "dotjoshjohnson.xml", // Relies on Java
+        "redhat.vscode-xml"
+    ],
+}

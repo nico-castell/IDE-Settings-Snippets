@@ -4,11 +4,21 @@
 *.lnk
 *.url
 ~*
+$RECYCLE.BIN/
 
 # Exclude test and tmp files
-*test*
-*tmp*
+*[Tt]est*
+*[Tt]emp*
+*[Tt]mp*
 
 # Ignore vim files
 *~
 *.swp
+
+# Backups
+Backup*/
+
+# Visual Studio Workspace folder
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
