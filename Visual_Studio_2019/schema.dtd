@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!ELEMENT CodeSnippets (CodeSnippet+)>
+<!ELEMENT CodeSnippet (Header,Snippet)>
+
+<!ELEMENT Header (Author?,Description?,HelpUrl?,Keywords?,Shortcut?,SnippetTypes?,Title)>
+<!ELEMENT Author (#PCDATA)>
+<!ELEMENT Description (#PCDATA)>
+<!ELEMENT HelpUrl (#PCDATA)>
+<!ELEMENT Keywords (Keyword*)>
+<!ELEMENT Keyword (#PCDATA)>
+<!ELEMENT Shortcut (#PCDATA)>
+<!ELEMENT SnippetTypes (SnippetType*)>
+<!ELEMENT SnippetType (#PCDATA)>
+<!ELEMENT Title (#PCDATA)>
+
+<!ELEMENT Snippet (References?,Imports?,Declarations?,Code)>
+<!ELEMENT References (#PCDATA)>
+<!ELEMENT Imports (Import)>
+<!ELEMENT Import (Namespace)>
+<!ELEMENT Namespace (#PCDATA)>
+
+<!ELEMENT Declarations (Literal*,Object*)>
+<!ELEMENT Literal (ID,Tooltip?,Default,Function?)>
+<!ELEMENT Object (ID,Type,Tooltip?,Default,Function?)>
+<!ELEMENT ID (#PCDATA)>
+<!ELEMENT Type (#PCDATA)>
+<!ELEMENT Tooltip (#PCDATA)>
+<!ELEMENT Default (#PCDATA)>
+<!ELEMENT Function (#PCDATA)>
+
+<!ELEMENT Code (#PCDATA)>
+
+<!ATTLIST CodeSnippet Format CDATA #REQUIRED>
+<!ATTLIST Literal Editable (true|false) #IMPLIED>
+<!ATTLIST Object Editable (true|false) #IMPLIED >
+<!ATTLIST Code Language CDATA #REQUIRED>

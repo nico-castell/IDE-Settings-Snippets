@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="CodeSnippets">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="CodeSnippet">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Header" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Author" type="xs:string" minOccurs="0" maxOccurs="1" />
+                    <xs:element name="Description" type="xs:string" minOccurs="0" maxOccurs="1" />
+                    <xs:element name="HelpUrl" type="xs:string" minOccurs="0" maxOccurs="1" />
+                    <xs:element name="Keywords" minOccurs="0" maxOccurs="1">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Keyword" minOccurs="1" maxOccurs="unbounded" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Shortcut" type="xs:string" minOccurs="0" maxOccurs="1" />
+                    <xs:element name="SnippetTypes" minOccurs="0" maxOccurs="1">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="SnippetType" minOccurs="1" maxOccurs="2" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Title" type="xs:string" minOccurs="1" maxOccurs="1" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Snippet" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="References" minOccurs="0" maxOccurs="1">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Reference" minOccurs="0" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Assembly" type="xs:string" minOccurs="1" maxOccurs="1" />
+                                <xs:element name="Url" type="xs:string" minOccurs="1" maxOccurs="1" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Imports" minOccurs="0" maxOccurs="1">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Import" minOccurs="1" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Namespace" type="xs:string" minOccurs="1" maxOccurs="1"></xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Declarations" minOccurs="0" maxOccurs="1">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Literal" minOccurs="0" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="ID" type="xs:string" minOccurs="1" maxOccurs="1" />
+                                <xs:element name="Tooltip" type="xs:string" minOccurs="0" maxOccurs="1" />
+                                <xs:element name="Default" type="xs:string" minOccurs="1" maxOccurs="1" />
+                                <xs:element name="Function" type="xs:string" minOccurs="0" maxOccurs="1" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="Object" minOccurs="0" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="ID" type="xs:string" minOccurs="1" maxOccurs="1" />
+                                <xs:element name="Type" type="xs:string" minOccurs="1" maxOccurs="1" />
+                                <xs:element name="Tooltip" type="xs:string" minOccurs="0" maxOccurs="1" />
+                                <xs:element name="Default" type="xs:string" minOccurs="1" maxOccurs="1" />
+                                <xs:element name="Function" type="xs:string" minOccurs="0" maxOccurs="1" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Code" minOccurs="1" maxOccurs="1">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute name="Language" type="xs:string" use="required" />
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="Format" use="required" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>
