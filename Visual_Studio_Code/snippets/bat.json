@@ -12,11 +12,7 @@
 	"Region": {
 		// A region inside a batch / bat / cmd / DOS script.
 		"prefix": "region",
-		"body": [
-			"::#region",
-			"${TM_SELECTED_TEXT}$0\n",
-			"::#endregion"
-		],
+		"body": "::#region\n\n$0\n\n::#endregion",
 		"description": "A batch region."
 	}
 }

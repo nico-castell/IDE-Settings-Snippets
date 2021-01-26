@@ -69,7 +69,7 @@
         "editor.rulers": [
             78,
             128
-        ],
+        ]
     },
     "[html]": {
         "editor.tabSize": 2
@@ -90,10 +90,10 @@
         "editor.tabSize": 2
     },
     "[plaintext]": {
-        "editor.tabSize": 2,
+        "editor.tabSize": 2
     },
     "[reg]": {
-        "editor.tabSize": 2,
+        "editor.tabSize": 2
     },
     // Git Settings:
     "git.confirmSync": false,
@@ -192,45 +192,10 @@
     "remote.SSH.configFile": "/home/nicolas/.ssh/vs_config",
     // Todo tree extensions settings:
     "todo-tree.tree.showScanModeButton": false,
-    // Vim emulation extension settings:
-    "vim.disableExtension": true,
-    "vim.easymotion": true,
-    "vim.incsearch": true,
-    "vim.useSystemClipboard": true,
-    "vim.useCtrlKeys": true,
-    "vim.hlsearch": true,
-    "vim.insertModeKeyBindings": [
-        {
-            "before": [ "j", "j" ],
-            "after": [ "<Esc>" ]
-        }
-    ],
-    "vim.normalModeKeyBindingsNonRecursive": [
-        {
-            "before": [ "<leader>", "d" ],
-            "after": [ "d", "d" ]
-        },
-        {
-            "before": [ "<C-n>" ],
-            "commands": [ ":nohl" ]
-        }
-    ],
-    "vim.leader": "<space>",
-    "vim.handleKeys": {
-        "<C-a>": false,
-        "<C-f>": false
-    },
     "gitlens.gitCommands.skipConfirmations": [
         "fetch:command",
         "stash-push:command",
         "switch:command",
         "branch-create:command"
-    ],
-    /* // Powermode extension:
-    "powermode.comboThreshold": 20,
-    "powermode.comboTimeout": 5,
-    "powermode.enabled": true,
-    "powermode.enableShake": false,
-    "powermode.enableStatusBarComboCounter": false,
-    "powermode.enableStatusBarComboTimer": false */
+    ]
 }
