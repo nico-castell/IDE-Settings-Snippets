@@ -12,5 +12,7 @@
         "editor.wordWrap": "on",
         "editor.quickSuggestions": true,
         "editor.rulers": [ 78 ]
-    }
+    },
+    "files.eol": "auto",
+    "files.encoding": "utf8",
 }
