@@ -22,8 +22,8 @@
       </Declarations>
       <Code Language="CPP">
         <![CDATA[$a$ = $a$ + $b$;
-                $b$ = $a$ - $b$;
-                $a$ = $a$ - $b$;]]>
+$b$ = $a$ - $b$;
+$a$ = $a$ - $b$;]]>
       </Code>
     </Snippet>
   </CodeSnippet>
@@ -41,9 +41,9 @@
     <Snippet>
       <Code Language="CPP">
         <![CDATA[#ifndef COMMON
-            #define COMMON
-            $selected$$end$
-            #endif // !COMMON]]>
+#define COMMON
+$selected$$end$
+#endif // !COMMON]]>
       </Code>
     </Snippet>
   </CodeSnippet>
@@ -60,12 +60,12 @@
       </Imports>
       <Code Language="CPP">
         <![CDATA[// Print ANSI escape code, if output is a terminal.
-            std::string cprty (const std::string &formatting)
-            {
-                if (!isatty(fineno(stdout)))
-                    return "";
-                return "\e[" + formatting + "m";
-            }$end$]]>
+std::string cprty (const std::string &formatting)
+{
+    if (!isatty(fineno(stdout)))
+        return "";
+    return "\e[" + formatting + "m";
+}$end$]]>
       </Code>
     </Snippet>
   </CodeSnippet>
@@ -122,9 +122,9 @@
       </Declarations>
       <Code Language="CPP">
         <![CDATA[std::ostream& operator<<(std::ostream& output, const $type$ $name$)
-            {
-                return output << $name$$end$;
-            }]]>
+{
+    return output << $name$$end$;
+}]]>
       </Code>
     </Snippet>
   </CodeSnippet>
@@ -150,9 +150,9 @@
       </Declarations>
       <Code Language="CPP">
         <![CDATA[$type$ $name$ ()
-            {
-                $selected$$end$
-            }]]>
+  {
+      $selected$$end$
+  }]]>
       </Code>
     </Snippet>
   </CodeSnippet>
@@ -188,10 +188,10 @@
       </Declarations>
       <Code Language="CPP">
         <![CDATA[template <typename $T$>
-            $type$ $name$($T$ $pname$)
-            {
-                $selected$$end$
-            }]]>
+$type$ $name$($T$ $pname$)
+{
+    $selected$$end$
+}]]>
       </Code>
     </Snippet>
   </CodeSnippet>
@@ -245,8 +245,8 @@
       </Declarations>
       <Code>
         <![CDATA[#pragma region $name$
-            $selected$$end$
-            #pragma endregion]]>
+$selected$$end$
+#pragma endregion]]>
       </Code>
     </Snippet>
   </CodeSnippet>
