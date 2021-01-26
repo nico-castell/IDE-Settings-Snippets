@@ -7,7 +7,7 @@ here. However, I highly recommend you read the documentation
 ## How to write a Snippet
 VS Code snippets follow JSON like syntax (and allow for comments).
 
-```json
+```jsonc
 {
     "shebang": {
         // You can comment if you want.
