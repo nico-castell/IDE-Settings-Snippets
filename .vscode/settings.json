@@ -7,5 +7,10 @@
     "[xml]": {
         "editor.tabSize": 2,
         "editor.defaultFormatter": "redhat.vscode-xml"
+    },
+    "[markdown]": {
+        "editor.wordWrap": "on",
+        "editor.quickSuggestions": true,
+        "editor.rulers": [ 78 ]
     }
 }
