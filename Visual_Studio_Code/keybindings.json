@@ -1,17 +1,17 @@
 // Place your key bindings in this file to override the defaults
 [
-    // Open shell launcher.
+// Open shell launcher =================================================================================================
     {
         "key": "ctrl+shift+t",
         "command": "shellLauncher.launch"
     },
-    // Run selected text.
+// Run selected text ===================================================================================================
     {
         "key": "f8",
         "command": "workbench.action.terminal.runSelectedText",
         "when": "editorHasSelection"
     },
-    // Focusing and closing the integrated terminal.
+// Focusing and closing the integrated terminal ========================================================================
     {
         "key": "ctrl+alt+[Semicolon]",
         "command": "workbench.action.terminal.kill"
@@ -20,53 +20,78 @@
         "key": "ctrl+[Semicolon]",
         "command": "workbench.action.terminal.focus"
     },
+    {
+        "key": "ctrl+alt+j",
+        "command": "-liveshare.join",
+        "when": "liveshare:state != 'Joined' && liveshare:state != 'Shared'"
+    },
     // Insert Snippet.
     {
         "key": "ctrl+alt+j",
         "command": "editor.action.insertSnippet",
         "when": "editorTextFocus"
     },
+// Outdent and Indent lines ============================================================================================
     {
-        "key": "ctrl+alt+j",
-        "command": "-liveshare.join",
-        "when": "liveshare:state != 'Joined' && liveshare:state != 'Shared'"
-    },
-    // Insert comment.
-    {
-        "key": "ctrl+shift+7",
-        "command": "editor.action.commentLine",
-        "when": "editorTextFocus && !editorReadOnly"
-    },
-    {
-        "key": "ctrl+oem_2",
-        "command": "-editor.action.commentLine",
+        "key": "ctrl+[Minus]",
+        "command": "editor.action.outdentLines",
         "when": "editorTextFocus && !editorReadonly"
     },
     {
-        "key": "ctrl+shift+a",
-        "command": "editor.action.blockComment",
+        "key": "ctrl+shift+[",
+        "command": "-editor.action.outdentLines",
         "when": "editorTextFocus && !editorReadonly"
     },
     {
-        "key": "shift+alt+a",
-        "command": "-editor.action.blockComment",
+        "key": "ctrl+[Equal]",
+        "command": "editor.action.indentLines",
         "when": "editorTextFocus && !editorReadonly"
     },
-    // Format selection.
     {
-        "key": "ctrl+shift+I",
-        "command": "editor.action.formatSelection",
-        "when": "editorHasDocumentSelectionFormattingProvider && editorTextFocus && !editorReadonly"
+        "key": "ctrl+shift+]",
+        "command": "-editor.action.indentLines",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+// Ease integrated terminal ============================================================================================
+    {
+        "key": "ctrl+pagedown",
+        "command": "workbench.action.terminal.focusNext",
+        "when": "terminalFocus && terminalProcessSupported"
     },
     {
-        "key": "ctrl+shift+i",
-        "command": "-workbench.action.toggleDevTools",
-        "when": "isDevelopment"
+        "key": "ctrl+pageup",
+        "command": "workbench.action.terminal.focusPrevious",
+        "when": "terminalFocus && terminalProcessSupported"
     },
-    // Autoclear the terminal
     {
-        "key": "ctrl+l",
-        "command": "workbench.action.terminal.clear",
-        "when": "terminal.focus"
+        "key": "ctrl+shift+[Semicolon]",
+        "command": "workbench.action.toggleMaximizedPanel",
+        "when": "terminalFocus && terminalProcessSupported"
+    },
+// Python specific shortcuts ===========================================================================================
+    {
+        "key": "F5",
+        "command": "python.execInTerminal",
+        "when": "editorLangId == python"
+    },
+    {
+        "key": "shift+F8",
+        "command": "python.startREPL",
+        "when": "editorLangId == python"
+    },
+    {
+        "key": "shift+enter",
+        "command": "-python.execSelectionInTerminal",
+        "when": "editorTextFocus && !findInputFocussed && !jupyter.ownsSelection && !notebookEditorFocused && !replaceInputFocussed && editorLangId == 'python'"
+    },
+    {
+        "key": "F8",
+        "command": "python.execSelectionInTerminal",
+        "when": "editorTextFocus && !findInputFocussed && !jupyter.ownsSelection && !notebookEditorFocused && !replaceInputFocussed && editorLangId == 'python'"
+    },
+// Inspect Editor Tokens and Scopes ====================================================================================
+    {
+        "key": "ctrl+alt+shift+i",
+        "command": "editor.action.inspectTMScopes"
     }
 ]
