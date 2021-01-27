@@ -1,64 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <CodeSnippets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema.xsd">
-  <CodeSnippet Format="1.0.0">
-    <Header>
-      <Author>nico-castell</Author>
-      <Description>Quickly create a property</Description>
-      <Shortcut>mkprop</Shortcut>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Title>Make Property</Title>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>type</ID>
-          <Tooltip>The variable type</Tooltip>
-          <Default>int</Default>
-        </Literal>
-        <Literal>
-          <ID>name</ID>
-          <Tooltip>The name of the property</Tooltip>
-          <Default>Kites</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp">
-        <![CDATA[public $type$ $name$ { get; set; }$end$]]>
-      </Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.0.0">
-    <Header>
-      <Author>nico-castell</Author>
-      <Description>Quickly make a List</Description>
-      <Shortcut>mklist</Shortcut>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Title>Make a list</Title>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>System.Collections.Generic</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>type</ID>
-          <Tooltip>The variable type</Tooltip>
-          <Default>int</Default>
-        </Literal>
-        <Literal>
-          <ID>name</ID>
-          <Tooltip>The name of the list</Tooltip>
-          <Default>Ints</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CSharp">
-        <![CDATA[List<$type$> $name$ = new List<$type$>() { $end$ };]]>
-      </Code>
-    </Snippet>
-  </CodeSnippet>
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Author>nico-castell</Author>
+			<Description>Quickly create a property</Description>
+			<Shortcut>mkprop</Shortcut>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+			<Title>Make Property</Title>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>type</ID>
+					<Tooltip>The variable type</Tooltip>
+					<Default>int</Default>
+				</Literal>
+				<Literal>
+					<ID>name</ID>
+					<Tooltip>The name of the property</Tooltip>
+					<Default>Kites</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="CSharp">
+				<![CDATA[public $type$ $name$ { get; set; }$end$]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Author>nico-castell</Author>
+			<Description>Quickly make a List</Description>
+			<Shortcut>mklist</Shortcut>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+			<Title>Make a list</Title>
+		</Header>
+		<Snippet>
+			<Imports>
+				<Import>
+					<Namespace>System.Collections.Generic</Namespace>
+				</Import>
+			</Imports>
+			<Declarations>
+				<Literal>
+					<ID>type</ID>
+					<Tooltip>The variable type</Tooltip>
+					<Default>int</Default>
+				</Literal>
+				<Literal>
+					<ID>name</ID>
+					<Tooltip>The name of the list</Tooltip>
+					<Default>Ints</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="CSharp">
+				<![CDATA[List<$type$> $name$ = new List<$type$>() { $end$ };]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
 </CodeSnippets>

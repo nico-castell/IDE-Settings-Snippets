@@ -1,283 +1,283 @@
 <?xml version="1.0" encoding="utf-8"?>
 <CodeSnippets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema.xsd">
-  <CodeSnippet Format="1.0.0">
-    <Header>
-      <Author>nico-castell</Author>
-      <Description>Swap integers without a buffer</Description>
-      <Shortcut>swpInts</Shortcut>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Title>Swap Integers</Title>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>a</ID>
-          <Tooltip>The first integer</Tooltip>
-          <Default>a</Default>
-        </Literal>
-        <Literal>
-          <ID>b</ID>
-          <Tooltip>The second integer</Tooltip>
-          <Default>b</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CPP">
-        <![CDATA[$a$ = $a$ + $b$;
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Author>nico-castell</Author>
+			<Description>Swap integers without a buffer</Description>
+			<Shortcut>swpInts</Shortcut>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+			<Title>Swap Integers</Title>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>a</ID>
+					<Tooltip>The first integer</Tooltip>
+					<Default>a</Default>
+				</Literal>
+				<Literal>
+					<ID>b</ID>
+					<Tooltip>The second integer</Tooltip>
+					<Default>b</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="CPP">
+				<![CDATA[$a$ = $a$ + $b$;
 $b$ = $a$ - $b$;
 $a$ = $a$ - $b$;]]>
-      </Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.0.0">
-    <Header>
-      <Author>nico-castell</Author>
-      <Description>Preprocessor directive to only include common things once</Description>
-      <Shortcut>pcommon</Shortcut>
-      <Title>COMMON Pre-Process</Title>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-        <SnippetType>SurroundsWith</SnippetType>
-      </SnippetTypes>
-    </Header>
-    <Snippet>
-      <Code Language="CPP">
-        <![CDATA[#ifndef COMMON
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Author>nico-castell</Author>
+			<Description>Preprocessor directive to only include common things once</Description>
+			<Shortcut>pcommon</Shortcut>
+			<Title>COMMON Pre-Process</Title>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Code Language="CPP">
+				<![CDATA[#ifndef COMMON
 #define COMMON
 $selected$$end$
 #endif // !COMMON]]>
-      </Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.0.0">
-    <Header>
-      <Author>nico-castell</Author>
-      <Description>(LINUX) Test if stdout is a console, if it is, write ANSI escape sequence</Description>
-      <Shortcut>defCprty</Shortcut>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Title>Define cprty</Title>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>unistd.h</Namespace>
-        </Import>
-      </Imports>
-      <Code Language="CPP">
-        <![CDATA[// Print ANSI escape code, if output is a terminal.
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Author>nico-castell</Author>
+			<Description>(LINUX) Test if stdout is a console, if it is, write ANSI escape sequence</Description>
+			<Shortcut>defCprty</Shortcut>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+			<Title>Define cprty</Title>
+		</Header>
+		<Snippet>
+			<Imports>
+				<Import>
+					<Namespace>unistd.h</Namespace>
+				</Import>
+			</Imports>
+			<Code Language="CPP">
+				<![CDATA[// Print ANSI escape code, if output is a terminal.
 std::string cprty (const std::string &formatting)
 {
-    if (!isatty(fineno(stdout)))
-        return "";
-    return "\e[" + formatting + "m";
+		if (!isatty(fineno(stdout)))
+				return "";
+		return "\e[" + formatting + "m";
 }$end$]]>
-      </Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.0.0">
-    <Header>
-      <Author>nico-castell</Author>
-      <Description>Make a vector</Description>
-      <Shortcut>mkVector</Shortcut>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Title>Make a vector</Title>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>vector</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>type</ID>
-          <Tooltip>The type in the array</Tooltip>
-          <Default>int</Default>
-        </Literal>
-        <Literal>
-          <ID>name</ID>
-          <Tooltip>The name of the vector</Tooltip>
-          <Default>Kites</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CPP">
-        <![CDATA[std::vector<$type$> $name$$end$]]>
-      </Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.0.0">
-    <Header>
-      <Author>nico-castell</Author>
-      <Description>Define an overload for the ostream operator</Description>
-      <Shortcut>defCout</Shortcut>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Title>Overload the ostream operator</Title>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>iostream</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal>
-          <ID>type</ID>
-          <Tooltip>The type of object or data to output</Tooltip>
-          <Default>int</Default>
-        </Literal>
-        <Literal>
-          <ID>name</ID>
-          <Tooltip>The name you use to access your data</Tooltip>
-          <Default>Kite</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CPP">
-        <![CDATA[std::ostream& operator<<(std::ostream& output, const $type$ $name$)
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Author>nico-castell</Author>
+			<Description>Make a vector</Description>
+			<Shortcut>mkVector</Shortcut>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+			<Title>Make a vector</Title>
+		</Header>
+		<Snippet>
+			<Imports>
+				<Import>
+					<Namespace>vector</Namespace>
+				</Import>
+			</Imports>
+			<Declarations>
+				<Literal>
+					<ID>type</ID>
+					<Tooltip>The type in the array</Tooltip>
+					<Default>int</Default>
+				</Literal>
+				<Literal>
+					<ID>name</ID>
+					<Tooltip>The name of the vector</Tooltip>
+					<Default>Kites</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="CPP">
+				<![CDATA[std::vector<$type$> $name$$end$]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Author>nico-castell</Author>
+			<Description>Define an overload for the ostream operator</Description>
+			<Shortcut>defCout</Shortcut>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+			<Title>Overload the ostream operator</Title>
+		</Header>
+		<Snippet>
+			<Imports>
+				<Import>
+					<Namespace>iostream</Namespace>
+				</Import>
+			</Imports>
+			<Declarations>
+				<Literal>
+					<ID>type</ID>
+					<Tooltip>The type of object or data to output</Tooltip>
+					<Default>int</Default>
+				</Literal>
+				<Literal>
+					<ID>name</ID>
+					<Tooltip>The name you use to access your data</Tooltip>
+					<Default>Kite</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="CPP">
+				<![CDATA[std::ostream& operator<<(std::ostream& output, const $type$ $name$)
 {
-    return output << $name$$end$;
+		return output << $name$$end$;
 }]]>
-      </Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.0.0">
-    <Header>
-      <Author>nico-castell</Author>
-      <Description>Define a function</Description>
-      <Shortcut>deff</Shortcut>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Title>Define function</Title>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>type</ID>
-          <Tooltip>The return type of the function</Tooltip>
-          <Default>void</Default>
-        </Literal>
-        <Literal>
-          <ID>name</ID>
-          <Tooltip>The name of the function</Tooltip>
-          <Default>Surf</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CPP">
-        <![CDATA[$type$ $name$ ()
-  {
-      $selected$$end$
-  }]]>
-      </Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.0.0">
-    <Header>
-      <Author>nico-castell</Author>
-      <Description>Define a templetized function</Description>
-      <Shortcut>deft</Shortcut>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Title>Define templetized function</Title>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>T</ID>
-          <Tooltip>The typename</Tooltip>
-          <Default>T</Default>
-        </Literal>
-        <Literal>
-          <ID>type</ID>
-          <Tooltip>The return type</Tooltip>
-          <Default>void</Default>
-        </Literal>
-        <Literal>
-          <ID>name</ID>
-          <Tooltip>The name of the function</Tooltip>
-          <Default>Surf</Default>
-        </Literal>
-        <Literal>
-          <ID>pname</ID>
-          <Tooltip>Parameter name</Tooltip>
-          <Default>cookie</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CPP">
-        <![CDATA[template <typename $T$>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Author>nico-castell</Author>
+			<Description>Define a function</Description>
+			<Shortcut>deff</Shortcut>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+			<Title>Define function</Title>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>type</ID>
+					<Tooltip>The return type of the function</Tooltip>
+					<Default>void</Default>
+				</Literal>
+				<Literal>
+					<ID>name</ID>
+					<Tooltip>The name of the function</Tooltip>
+					<Default>Surf</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="CPP">
+				<![CDATA[$type$ $name$ ()
+	{
+			$selected$$end$
+	}]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Author>nico-castell</Author>
+			<Description>Define a templetized function</Description>
+			<Shortcut>deft</Shortcut>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+			<Title>Define templetized function</Title>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>T</ID>
+					<Tooltip>The typename</Tooltip>
+					<Default>T</Default>
+				</Literal>
+				<Literal>
+					<ID>type</ID>
+					<Tooltip>The return type</Tooltip>
+					<Default>void</Default>
+				</Literal>
+				<Literal>
+					<ID>name</ID>
+					<Tooltip>The name of the function</Tooltip>
+					<Default>Surf</Default>
+				</Literal>
+				<Literal>
+					<ID>pname</ID>
+					<Tooltip>Parameter name</Tooltip>
+					<Default>cookie</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="CPP">
+				<![CDATA[template <typename $T$>
 $type$ $name$($T$ $pname$)
 {
-    $selected$$end$
+		$selected$$end$
 }]]>
-      </Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.0.0">
-    <Header>
-      <Author>nico-castell</Author>
-      <Description>Pass CLI arguments to the program</Description>
-      <Shortcut>argcv</Shortcut>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Title>Pass arguments to main</Title>
-    </Header>
-    <Snippet>
-      <Code Language="CPP">
-        <![CDATA[int argc, char* argv[]$end$]]>
-      </Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.0.0">
-    <Header>
-      <Author>nico-castell</Author>
-      <Description>Make an inline if statement</Description>
-      <Shortcut>ifi</Shortcut>
-      <Title>if inline</Title>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>test</ID>
-          <Tooltip>The test performed to branch</Tooltip>
-          <Default>true</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CPP">
-        <![CDATA[if ($test$) $end$]]>
-      </Code>
-    </Snippet>
-  </CodeSnippet>
-  <CodeSnippet Format="1.0.0">
-    <Header>
-      <Author>nico-castell</Author>
-      <Description>Make a folding region</Description>
-      <Shortcut>fregion</Shortcut>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
-      <Title>Folding region</Title>
-    </Header>
-    <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>name</ID>
-          <Tooltip>The name of the folding region</Tooltip>
-          <Default>Does cool stuff</Default>
-        </Literal>
-      </Declarations>
-      <Code Language="CPP">
-        <![CDATA[#pragma region $name$
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Author>nico-castell</Author>
+			<Description>Pass CLI arguments to the program</Description>
+			<Shortcut>argcv</Shortcut>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+			<Title>Pass arguments to main</Title>
+		</Header>
+		<Snippet>
+			<Code Language="CPP">
+				<![CDATA[int argc, char* argv[]$end$]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Author>nico-castell</Author>
+			<Description>Make an inline if statement</Description>
+			<Shortcut>ifi</Shortcut>
+			<Title>if inline</Title>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>test</ID>
+					<Tooltip>The test performed to branch</Tooltip>
+					<Default>true</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="CPP">
+				<![CDATA[if ($test$) $end$]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Author>nico-castell</Author>
+			<Description>Make a folding region</Description>
+			<Shortcut>fregion</Shortcut>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+			<Title>Folding region</Title>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>name</ID>
+					<Tooltip>The name of the folding region</Tooltip>
+					<Default>Does cool stuff</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="CPP">
+				<![CDATA[#pragma region $name$
 $selected$$end$
 #pragma endregion]]>
-      </Code>
-    </Snippet>
-  </CodeSnippet>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
 </CodeSnippets>

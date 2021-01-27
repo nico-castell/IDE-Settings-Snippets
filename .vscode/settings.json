@@ -6,13 +6,14 @@
     },
     "[xml]": {
         "editor.tabSize": 2,
-        "editor.defaultFormatter": "redhat.vscode-xml"
+        "editor.defaultFormatter": "redhat.vscode-xml",
+        "editor.insertSpaces": false
     },
     "[markdown]": {
         "editor.wordWrap": "on",
         "editor.quickSuggestions": true,
         "editor.rulers": [ 78 ]
     },
-    "files.eol": "auto",
+    "files.eol": "\n",
     "files.encoding": "utf8",
 }
