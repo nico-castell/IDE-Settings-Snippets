@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <CodeSnippets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema.xsd">
+	<!-- Create snippets for properties -->
 	<CodeSnippet Format="1.0.0">
 		<Header>
 			<Author>nico-castell</Author>
@@ -23,11 +24,50 @@
 					<Default>Kites</Default>
 				</Literal>
 			</Declarations>
-			<Code Language="CSharp">
+			<Code Language="CSharp" Kind="type decl">
 				<![CDATA[public $type$ $name$ { get; set; }$end$]]>
 			</Code>
 		</Snippet>
 	</CodeSnippet>
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Author>nico-castell</Author>
+			<Description>Make a property getter</Description>
+			<Shortcut>mkGet</Shortcut>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+			<Title>Make a getter</Title>
+		</Header>
+		<Snippet>
+			<Code Language="CSharp" Kind="method body">
+				<![CDATA[get
+{
+		return$end$
+}]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Author>nico-castell</Author>
+			<Description>Make a property setter</Description>
+			<Shortcut>mkSet</Shortcut>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+			<Title>Make a setter</Title>
+		</Header>
+		<Snippet>
+			<Code Language="CSharp" Kind="method body">
+				<![CDATA[set
+{
+    value$end$
+}]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+	<!-- Make a list -->
 	<CodeSnippet Format="1.0.0">
 		<Header>
 			<Author>nico-castell</Author>
@@ -56,11 +96,12 @@
 					<Default>Ints</Default>
 				</Literal>
 			</Declarations>
-			<Code Language="CSharp">
+			<Code Language="CSharp" Kind="type decl">
 				<![CDATA[List<$type$> $name$ = new List<$type$>() { $end$ };]]>
 			</Code>
 		</Snippet>
 	</CodeSnippet>
+	<!-- Surround Code in a folding region -->
 	<CodeSnippet Format="1.0.0">
 		<Header>
 			<Author>nico-castell</Author>
