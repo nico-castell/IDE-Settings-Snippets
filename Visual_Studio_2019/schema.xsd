@@ -101,7 +101,35 @@
 											<xs:complexType>
 												<xs:simpleContent>
 													<xs:extension base="xs:string">
-														<xs:attribute name="Language" type="xs:string" use="required" />
+														<xs:attribute name="Language" use="required">
+															<xs:simpleType>
+																<xs:restriction base="xs:string">
+																	<xs:minLength value="1"/>
+																	<xs:enumeration value="VB"/>
+																	<xs:enumeration value="CSharp"/>
+																	<xs:enumeration value="CPP"/>
+																	<xs:enumeration value="XAML"/>
+																	<xs:enumeration value="XML"/>
+																	<xs:enumeration value="JavaScript"/>
+																	<xs:enumeration value="TypeScript"/>
+																	<xs:enumeration value="SQL"/>
+																	<xs:enumeration value="HTML"/>
+																</xs:restriction>
+															</xs:simpleType>
+														</xs:attribute>
+														<xs:attribute name="Kind">
+															<xs:simpleType>
+																<xs:restriction base="xs:string">
+																	<xs:minLength value="1"/>
+																	<xs:enumeration value="method body"/>
+																	<xs:enumeration value="method decl"/>
+																	<xs:enumeration value="type decl"/>
+																	<xs:enumeration value="file"/>
+																	<xs:enumeration value="any"/>
+																</xs:restriction>
+															</xs:simpleType>
+														</xs:attribute>
+														<xs:attribute name="Delimiter" type="xs:string"/>
 													</xs:extension>
 												</xs:simpleContent>
 											</xs:complexType>
