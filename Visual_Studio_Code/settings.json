@@ -5,7 +5,6 @@
     "terminal.integrated.cursorStyle": "line",
     "terminal.integrated.cwd": "${fileDirname}",
     "terminal.integrated.shell.windows": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
-    // "terminal.integrated.fontFamily": "PowerlineSymbols, monospace",
     "terminal.integrated.fontFamily": "Hack, monospace",
     "settingsSync.ignoredSettings": [
         "terminal.integrated.fontFamily"
@@ -53,9 +52,8 @@
     "files.eol": "\n", // Defaul end of line. (LF)
     "files.insertFinalNewline": true,
     "files.associations": {
-        // "*.desktop": "properties" // Define .desktop syntax highlighting.
-        // "*.vdproj": "json" // Treat it as a JSON file
-        "*.snippet": "xml"
+        "*.snippet": "xml",
+        "*.txt": "plaintext"
     },
     "files.exclude": {
         "**/.git": true,
@@ -71,12 +69,16 @@
             128
         ]
     },
-    "[html]": {
-        "editor.tabSize": 2
-    },
     "[xml]": {
         "editor.tabSize": 2,
         "editor.defaultFormatter": "redhat.vscode-xml"
+    },
+    "[html]": {
+        "editor.tabSize": 2
+    },
+    "[markdown]": {
+        "editor.wordWrap": "on",
+        "editor.quickSuggestions": true
     },
     "[csharp]": {
         "editor.rulers": [
@@ -102,8 +104,7 @@
     "settingsSync.ignoredExtensions": [
         "ms-vscode-remote.remote-wsl",
         "ms-vscode.powershell",
-        "dbaeumer.vscode-eslint",
-        "redhat.vscode-xml"
+        "dbaeumer.vscode-eslint"
     ],
     // Shell launcher extension settings:
     "shellLauncher.shells.windows": [
@@ -197,5 +198,7 @@
         "stash-push:command",
         "switch:command",
         "branch-create:command"
-    ]
+    ],
+    "xml.java.home": "/usr/"
+    // "xml.java.home": "C:\\Program Files\\Java\\jre1.8.0_281"
 }

@@ -6,7 +6,7 @@
 	// Start a project =================================================================================================
 	"The start of the script": {
 		// A quick beginning for a short C++ script.
-		"prefix": ["cpp", "start"],
+		"prefix": "start",
 		"body": [
 			"#include <iostream>\n",
 			"int main()",
@@ -25,7 +25,7 @@
 	},
 	// Region statements ===============================================================================================
 	"Region": {
-		"prefix": "region",
+		"prefix": "fregion",
 		"body": "#pragma region ${1:Region_Name}\n\n$0\n\n#pragma endregion $1",
 		"description": "Make a folding region."
 	},
@@ -50,7 +50,7 @@
 	},
 	"Clock library": {
 		// The libraries for sleep() for Windows and Unix-based OS's.
-		"prefix": "clocklib",
+		"prefix": "mkOSapi",
 		"body": [
 			"#ifdef _WIN32",
 			"#include <Windows.h>",
@@ -63,12 +63,26 @@
 	// Functions =======================================================================================================
 	"Functions": {
 		// A basic function.
-		"prefix": "function",
+		"prefix": "defF",
 		"body": [
-			"${2:/* Return type */} ${3:/* Name */}(${4:/* Parameters */})",
-			"{\n    ${TM_SELECTED_TEXT}$0\n}",
+			"${2:void} ${3:Surft}($4)",
+			"{",
+			"    ${TM_SELECTED_TEXT}$0",
+			"}"
 		],
 		"description": "The basics of a function"
+	},
+	"Templetized Function": {
+		// Templetized function to use any object
+		"prefix": "defT",
+		"description": "Define a templetized function",
+		"body": [
+			"template <typename ${1:T}>",
+			"${2:void} ${3:Surf}($1 ${4:Named})",
+			"{",
+			"    ${TM_SELECTED_TEXT}$0",
+			"}"
+		]
 	},
 	// Branching =======================================================================================================
 	"If inline statement": {
@@ -121,7 +135,7 @@
 	// Pre-made code ===================================================================================================
 	"Swap integers": {
 		// Swap integer values without using a 3rd variable.
-		"prefix": "swapint",
+		"prefix": "swpInts",
 		"body": [
 			"// Swap integers w/o 3rd variable.",
 			"${1:a} = $1 + ${2:b};",
@@ -132,7 +146,7 @@
 	},
 	"Format strings on console": {
 		// Only use escape sequences if the stream is a console.
-		"prefix": "defcprty",
+		"prefix": "defCprty",
 		"body": [
 			"// Only print escape sequence to format output if the output is a console.",
 			"string cprty (const string &formatting)",
