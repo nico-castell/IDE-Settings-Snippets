@@ -61,4 +61,30 @@
 			</Code>
 		</Snippet>
 	</CodeSnippet>
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Author>nico-castell</Author>
+			<Description>Make a folding region</Description>
+			<Shortcut>fregion</Shortcut>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+			<Title>Make a folding region</Title>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>name</ID>
+					<Tooltip>The name of the region</Tooltip>
+					<Default>Kite zone</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="CSharp" Kind="any">
+				<![CDATA[#region $name$
+$selected$$end$
+#endregion]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
 </CodeSnippets>

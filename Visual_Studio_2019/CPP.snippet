@@ -262,6 +262,7 @@ $type$ $name$($T$ $pname$)
 			<Shortcut>fregion</Shortcut>
 			<SnippetTypes>
 				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
 			</SnippetTypes>
 			<Title>Folding region</Title>
 		</Header>
@@ -277,6 +278,26 @@ $type$ $name$($T$ $pname$)
 				<![CDATA[#pragma region $name$
 $selected$$end$
 #pragma endregion]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Author>nico-castell</Author>
+			<Description>Include headers for the OS</Description>
+			<Shortcut>mkOSapi</Shortcut>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+			<Title>Include OS</Title>
+		</Header>
+		<Snippet>
+			<Code Language="CPP" Kind="file">
+				<![CDATA[#ifdef _WIN32
+#include <Windows.h>
+#else
+#include <unistd.h>
+#endif]]>
 			</Code>
 		</Snippet>
 	</CodeSnippet>
