@@ -10,17 +10,17 @@
 							<xs:element name="Header" minOccurs="1" maxOccurs="1">
 								<xs:complexType>
 									<xs:all>
-										<xs:element name="Author" type="xs:string" minOccurs="0" maxOccurs="1" />
-										<xs:element name="Description" type="xs:string" minOccurs="0" maxOccurs="1" />
-										<xs:element name="HelpUrl" type="xs:string" minOccurs="0" maxOccurs="1" />
+										<xs:element name="Author" type="xs:string" minOccurs="0" maxOccurs="1"/>
+										<xs:element name="Description" type="xs:string" minOccurs="0" maxOccurs="1"/>
+										<xs:element name="HelpUrl" type="xs:string" minOccurs="0" maxOccurs="1"/>
 										<xs:element name="Keywords" minOccurs="0" maxOccurs="1">
 											<xs:complexType>
 												<xs:sequence>
-													<xs:element name="Keyword" minOccurs="0" maxOccurs="unbounded" />
+													<xs:element name="Keyword" minOccurs="0" maxOccurs="unbounded"/>
 												</xs:sequence>
 											</xs:complexType>
 										</xs:element>
-										<xs:element name="Shortcut" type="xs:string" minOccurs="0" maxOccurs="1" />
+										<xs:element name="Shortcut" type="xs:string" minOccurs="0" maxOccurs="1"/>
 										<xs:element name="SnippetTypes" minOccurs="0" maxOccurs="1">
 											<xs:complexType>
 												<xs:sequence>
@@ -36,7 +36,7 @@
 												</xs:sequence>
 											</xs:complexType>
 										</xs:element>
-										<xs:element name="Title" type="xs:string" minOccurs="1" maxOccurs="1" />
+										<xs:element name="Title" type="xs:string" minOccurs="1" maxOccurs="1"/>
 									</xs:all>
 								</xs:complexType>
 							</xs:element>
@@ -49,8 +49,8 @@
 													<xs:element name="Reference" minOccurs="0" maxOccurs="unbounded">
 														<xs:complexType>
 															<xs:all>
-																<xs:element name="Assembly" type="xs:string" minOccurs="1" maxOccurs="1" />
-																<xs:element name="Url" type="xs:string" minOccurs="1" maxOccurs="1" />
+																<xs:element name="Assembly" type="xs:string" minOccurs="1" maxOccurs="1"/>
+																<xs:element name="Url" type="xs:string" minOccurs="1" maxOccurs="1"/>
 															</xs:all>
 														</xs:complexType>
 													</xs:element>
@@ -76,21 +76,21 @@
 													<xs:element name="Literal" minOccurs="0" maxOccurs="unbounded">
 														<xs:complexType>
 															<xs:all>
-																<xs:element name="ID" type="xs:string" minOccurs="1" maxOccurs="1" />
-																<xs:element name="Tooltip" type="xs:string" minOccurs="0" maxOccurs="1" />
-																<xs:element name="Default" type="xs:string" minOccurs="1" maxOccurs="1" />
-																<xs:element name="Function" type="xs:string" minOccurs="0" maxOccurs="1" />
+																<xs:element name="ID" type="xs:string" minOccurs="1" maxOccurs="1"/>
+																<xs:element name="Tooltip" type="xs:string" minOccurs="0" maxOccurs="1"/>
+																<xs:element name="Default" type="xs:string" minOccurs="1" maxOccurs="1"/>
+																<xs:element name="Function" type="xs:string" minOccurs="0" maxOccurs="1"/>
 															</xs:all>
 														</xs:complexType>
 													</xs:element>
 													<xs:element name="Object" minOccurs="0" maxOccurs="unbounded">
 														<xs:complexType>
 															<xs:all>
-																<xs:element name="ID" type="xs:string" minOccurs="1" maxOccurs="1" />
-																<xs:element name="Type" type="xs:string" minOccurs="1" maxOccurs="1" />
-																<xs:element name="Tooltip" type="xs:string" minOccurs="0" maxOccurs="1" />
-																<xs:element name="Default" type="xs:string" minOccurs="1" maxOccurs="1" />
-																<xs:element name="Function" type="xs:string" minOccurs="0" maxOccurs="1" />
+																<xs:element name="ID" type="xs:string" minOccurs="1" maxOccurs="1"/>
+																<xs:element name="Type" type="xs:string" minOccurs="1" maxOccurs="1"/>
+																<xs:element name="Tooltip" type="xs:string" minOccurs="0" maxOccurs="1"/>
+																<xs:element name="Default" type="xs:string" minOccurs="1" maxOccurs="1"/>
+																<xs:element name="Function" type="xs:string" minOccurs="0" maxOccurs="1"/>
 															</xs:all>
 														</xs:complexType>
 													</xs:element>
@@ -138,7 +138,7 @@
 								</xs:complexType>
 							</xs:element>
 						</xs:sequence>
-						<xs:attribute name="Format" use="required" />
+						<xs:attribute name="Format" use="required"/>
 					</xs:complexType>
 				</xs:element>
 			</xs:sequence>
