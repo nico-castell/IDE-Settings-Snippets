@@ -301,4 +301,47 @@ $selected$$end$
 			</Code>
 		</Snippet>
 	</CodeSnippet>
+	<!-- Automate std::cout & std::cin -->
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Author>nico-castell</Author>
+			<Description>Simplify Output</Description>
+			<Shortcut>cout</Shortcut>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+			<Title>Quickly make cout</Title>
+		</Header>
+		<Snippet>
+			<Imports>
+				<Import>
+					<Namespace>iostream</Namespace>
+				</Import>
+			</Imports>
+			<Code Language="CPP" Kind="method body">
+				<![CDATA[std::cout <<$end$]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Author>nico-castell</Author>
+			<Description>Simplify input</Description>
+			<Shortcut>cin</Shortcut>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+			<Title>Quickly take input</Title>
+		</Header>
+		<Snippet>
+			<Imports>
+				<Import>
+					<Namespace>iostream</Namespace>
+				</Import>
+			</Imports>
+			<Code Language="CPP" Kind="method body">
+				<![CDATA[std::cin >>$end$]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
 </CodeSnippets>

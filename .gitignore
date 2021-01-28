@@ -18,7 +18,10 @@ $RECYCLE.BIN/
 # Backups
 Backup*/
 
-# Visual Studio Workspace folder
+# Visual Studio Code Workspace folder
 .vscode/*
 !.vscode/settings.json
 !.vscode/extensions.json
+
+# Visual Studio files
+.vs/*

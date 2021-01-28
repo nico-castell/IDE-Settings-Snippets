@@ -62,7 +62,7 @@
 			<Code Language="CSharp" Kind="method body">
 				<![CDATA[set
 {
-    value$end$
+		value$end$
 }]]>
 			</Code>
 		</Snippet>
@@ -125,6 +125,49 @@
 				<![CDATA[#region $name$
 $selected$$end$
 #endregion]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+	<!-- Shortcuts for CLI IO -->
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Author>nico-castell</Author>
+			<Description>Output to the console</Description>
+			<Shortcut>cout</Shortcut>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+			<Title>Output to the console</Title>
+		</Header>
+		<Snippet>
+			<Imports>
+				<Import>
+					<Namespace>System</Namespace>
+				</Import>
+			</Imports>
+			<Code Language="CSharp" Kind="method body">
+				<![CDATA[Console.WriteLine($end$);]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Author>nico-castell</Author>
+			<Description>Input from the console</Description>
+			<Shortcut>cin</Shortcut>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+			<Title>Input from the console</Title>
+		</Header>
+		<Snippet>
+			<Imports>
+				<Import>
+					<Namespace>System</Namespace>
+				</Import>
+			</Imports>
+			<Code Language="CSharp" Kind="method body">
+				<![CDATA[Console.ReadLine()$end$]]>
 			</Code>
 		</Snippet>
 	</CodeSnippet>
