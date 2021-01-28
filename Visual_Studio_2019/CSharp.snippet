@@ -29,44 +29,6 @@
 			</Code>
 		</Snippet>
 	</CodeSnippet>
-	<CodeSnippet Format="1.0.0">
-		<Header>
-			<Author>nico-castell</Author>
-			<Description>Make a property getter</Description>
-			<Shortcut>mkGet</Shortcut>
-			<SnippetTypes>
-				<SnippetType>Expansion</SnippetType>
-			</SnippetTypes>
-			<Title>Make a getter</Title>
-		</Header>
-		<Snippet>
-			<Code Language="CSharp" Kind="method body">
-				<![CDATA[get
-{
-		return$end$
-}]]>
-			</Code>
-		</Snippet>
-	</CodeSnippet>
-	<CodeSnippet Format="1.0.0">
-		<Header>
-			<Author>nico-castell</Author>
-			<Description>Make a property setter</Description>
-			<Shortcut>mkSet</Shortcut>
-			<SnippetTypes>
-				<SnippetType>Expansion</SnippetType>
-			</SnippetTypes>
-			<Title>Make a setter</Title>
-		</Header>
-		<Snippet>
-			<Code Language="CSharp" Kind="method body">
-				<![CDATA[set
-{
-		value$end$
-}]]>
-			</Code>
-		</Snippet>
-	</CodeSnippet>
 	<!-- Make a list -->
 	<CodeSnippet Format="1.0.0">
 		<Header>
@@ -168,6 +130,74 @@ $selected$$end$
 			</Imports>
 			<Code Language="CSharp" Kind="method body">
 				<![CDATA[Console.ReadLine()$end$]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+	<!-- Swap integers -->
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Author>nico-castell</Author>
+			<Description>Swap integers without using a buffer</Description>
+			<Shortcut>swpInts</Shortcut>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+			<Title>Swap integers</Title>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>a</ID>
+					<Tooltip>The first integer</Tooltip>
+					<Default>a</Default>
+				</Literal>
+				<Literal>
+					<ID>b</ID>
+					<Tooltip>The second integer</Tooltip>
+					<Default>b</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="CSharp" Kind="method body">
+				<![CDATA[$a$ = $a$ + $b$;
+$b$ = $a$ - $b$;
+$a$ = $a$ - $b$;]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Author>nico-castell</Author>
+			<Description>Quickly define a function</Description>
+			<Shortcut>defF</Shortcut>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+			<Title>Define a function</Title>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>type</ID>
+					<Tooltip>The return type</Tooltip>
+					<Default>void</Default>
+				</Literal>
+				<Literal>
+					<ID>name</ID>
+					<Tooltip>The name of the function</Tooltip>
+					<Default>Surf</Default>
+				</Literal>
+				<Literal>
+					<ID>param</ID>
+					<Tooltip>Any parameters for the function</Tooltip>
+					<Default></Default>
+				</Literal>
+			</Declarations>
+			<Code Language="CSharp" Kind="method decl">
+				<![CDATA[$type$ $name$($param$)
+{
+    $selected$$end$
+}]]>
 			</Code>
 		</Snippet>
 	</CodeSnippet>
