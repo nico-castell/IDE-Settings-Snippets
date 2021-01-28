@@ -199,6 +199,6 @@
         "switch:command",
         "branch-create:command"
     ],
-    "xml.java.home": "/usr/"
+    "xml.java.home": "/usr/",
     // "xml.java.home": "C:\\Program Files\\Java\\jre1.8.0_281"
 }
