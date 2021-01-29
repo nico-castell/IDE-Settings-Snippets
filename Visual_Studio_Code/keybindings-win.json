@@ -1,17 +1,17 @@
 // Place your key bindings in this file to override the defaults
 [
-    // Open shell launcher.
+    // Open shell launcher ============================================================================================
     {
         "key": "ctrl+shift+t",
         "command": "shellLauncher.launch"
     },
-    // Run selected text.
+    // Run selected text ===============================================================================================
     {
         "key": "f8",
         "command": "workbench.action.terminal.runSelectedText",
         "when": "editorHasSelection"
     },
-    // Focusing and closing the integrated terminal.
+    // Focusing and closing the integrated terminal ====================================================================
     {
         "key": "ctrl+alt+[Semicolon]",
         "command": "workbench.action.terminal.kill"
@@ -20,7 +20,7 @@
         "key": "ctrl+[Semicolon]",
         "command": "workbench.action.terminal.focus"
     },
-    // Insert Snippet.
+    // Insert Snippet ==================================================================================================
     {
         "key": "ctrl+alt+j",
         "command": "editor.action.insertSnippet",
@@ -31,7 +31,7 @@
         "command": "-liveshare.join",
         "when": "liveshare:state != 'Joined' && liveshare:state != 'Shared'"
     },
-    // Insert comment.
+    // Insert comment ==================================================================================================
     {
         "key": "ctrl+shift+7",
         "command": "editor.action.commentLine",
@@ -52,7 +52,7 @@
         "command": "-editor.action.blockComment",
         "when": "editorTextFocus && !editorReadonly"
     },
-    // Format selection.
+    // Format selection ================================================================================================
     {
         "key": "ctrl+shift+I",
         "command": "editor.action.formatSelection",
@@ -63,21 +63,11 @@
         "command": "-workbench.action.toggleDevTools",
         "when": "isDevelopment"
     },
-    // Move lines up and down
+    // Move lines up and down ==========================================================================================
     {
         "key": "ctrl+alt+down",
         "command": "-editor.action.insertCursorBelow",
         "when": "editorTextFocus"
-    },
-    {
-        "key": "ctrl+alt+up",
-        "command": "-editor.action.insertCursorAbove",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "ctrl+alt+down",
-        "command": "editor.action.copyLinesDownAction",
-        "when": "editorTextFocus && !editorReadonly"
     },
     {
         "key": "shift+alt+down",
@@ -85,13 +75,23 @@
         "when": "editorTextFocus && !editorReadonly"
     },
     {
-        "key": "ctrl+alt+up",
-        "command": "editor.action.copyLinesUpAction",
+        "key": "ctrl+alt+down",
+        "command": "editor.action.copyLinesDownAction",
         "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+alt+up",
+        "command": "-editor.action.insertCursorAbove",
+        "when": "editorTextFocus"
     },
     {
         "key": "shift+alt+up",
         "command": "-editor.action.copyLinesUpAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+alt+up",
+        "command": "editor.action.copyLinesUpAction",
         "when": "editorTextFocus && !editorReadonly"
     }
 ]
