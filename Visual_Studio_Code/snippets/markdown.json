@@ -6,7 +6,7 @@
 	// Usual writing for GitHub ========================================================================================
 	"Block of code": {
 		// Input a block of code in a markdown file.
-		"prefix": "code",
+		"prefix": "mkCode",
 		"body": [
 			"```${1|bash,c,cpp,csharp,go,html,http,java,javascript,json,makefile,markdown,powershell,php,python,shell,sql,xml,yaml|}",
 			"${TM_SELECTED_TEXT}$0",
@@ -19,6 +19,62 @@
 		"prefix": "repolicense",
 		"body": "## License\n\nThis repository is available under the ${1|[MIT License](LICENSE),[BSD-2-Clause License](LICENSE),[BSD-3-Clause](LICENSE),[Apache License\\, version 2](LICENSE),[GNU GPL 3.0](LICENSE)|}.",
 		"description": "Choose a license to show in a README.md file"
+	},
+	"Add shields": {
+		// Add useful shields for a GitHub repository
+		"prefix": "mkShields",
+		"description": "Insert 3 shields for the repositorie's README",
+		"body": [
+			"[![GitHub repo size](https://img.shields.io/github/repo-size/${1:user}/${2:repository}?color=yellow&label=Repository%20Size)](https://github.com/$1/$2)",
+			"[![GitHub commits since latest release (by date)](https://img.shields.io/github/commits-since/$1/$2/latest?color=yellow&label=Commits%20since%20last%20release)](https://github.com/$1/$2/commits)",
+			"[![GitHub](https://img.shields.io/github/license/$1/$2?color=yellow&label=License)](LICENSE)"
+		]
+	},
+	// CHANGELOG =======================================================================================================
+	// Dates comply with ISO Standard 8601, as you can find in https://keepachangelog.com/en/1.0.0/
+	"Start Changelog": {
+		// Start a changelog with all the info you may need.
+		"prefix": "start-changelog",
+		"description": "Start a changelog with all the info you may want to write",
+		"body": [
+			"# Change log\n",
+			"All significant changes to **PopOS Start** will be documented here\n",
+			"1. [Unreleased](#Unreleased)",
+			"1. [Released](#Released)",
+			"1. [Pre Releases](#Pre-Releases)\n",
+			"## Unreleased\n",
+			"### Version 1.0.1\n",
+			"Lorem ipsum dolor sit amet, est integre denique te, dicant civibus dolores",
+			"has cu. Vix velit invenire id. Eligendi molestiae.\n",
+			"## Released\n",
+			"### Version 1.0.0 - *${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}*\n",
+			"#### Added",
+			"Lorem ipsum dolor sit amet, ius dolor blandit ex, at facer scripta adversarium",
+			"est. Ei dolorum alienum principes mel, mea.\n",
+			"#### Changed",
+			"Lorem ipsum dolor sit amet, vix persius splendide efficiantur ex, id est",
+			"blandit mandamus referrentur. Simul deseruisse vim in et.\n",
+			"#### Fixed",
+			"Lorem ipsum dolor sit amet, nam id maiorum mediocritatem, mei velit homero",
+			"aliquip ut. Vim ex tempor definitiones, qui ipsum.\n",
+			"#### Removed",
+			"Lorem ipsum dolor sit amet, usu ne tota scripta, nemore alienum vel in, id",
+			"convenire iudicabit quo. Adipiscing reprehendunt te.\n",
+			"---\n",
+			"## Pre-Releases"
+		]
+	},
+	"New release": {
+		// Quickly create a new release.
+		"prefix": "mkRelease",
+		"description": "Draft a new release in a CHANGELOG",
+		"body": [
+			"### Version ${1:1.0.0} - *${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}*\n",
+			"#### Added\n$0\n",
+			"#### Changed\n",
+			"#### Fixed\n",
+			"#### Removed",
+		]
 	},
 	// Regions =========================================================================================================
 	"Region": {
