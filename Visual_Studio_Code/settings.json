@@ -2,7 +2,7 @@
     // Privacy settings:
     "telemetry.enableTelemetry": false,
     // Terminal settings:
-    "terminal.integrated.cursorStyle": "line",
+    "terminal.integrated.cursorStyle": "underline",
     "terminal.integrated.cwd": "${fileDirname}",
     "terminal.integrated.shell.windows": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
     "terminal.integrated.fontFamily": "Hack, monospace",
@@ -70,8 +70,7 @@
         ]
     },
     "[xml]": {
-        "editor.tabSize": 2,
-        "editor.defaultFormatter": "redhat.vscode-xml"
+        "editor.tabSize": 2
     },
     "[html]": {
         "editor.tabSize": 2
@@ -199,6 +198,13 @@
         "switch:command",
         "branch-create:command"
     ],
-    "xml.java.home": "/usr/",
     // "xml.java.home": "C:\\Program Files\\Java\\jre1.8.0_281"
+    "xml.java.home": "/usr/",
+    // Material Icons extension settings:
+    "material-icon-theme.folders.theme": "specific",
+    "material-icon-theme.folders.color": "#a69f1c",
+    "material-icon-theme.folders.associations": {
+        "dbg": "Debug",
+        "about": "Docs"
+    }
 }

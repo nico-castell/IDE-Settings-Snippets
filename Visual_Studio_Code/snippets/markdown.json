@@ -3,6 +3,30 @@
 	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
 	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
 	// same ids are connected.
+	// Fancy title of a README.md ======================================================================================
+	"Centered title": {
+		"prefix": "mkTitle",
+		"description": "HTML for a centered title with a logo",
+		"body": [ "<h1 align=\"center\">",
+		"\t<br>",
+		"\t\t<img src=\"$0\">",
+		"\t<br><br>",
+		"\t${1:Title}",
+		"\t<br>",
+		"</h1>"
+		]
+	},
+	"Centered shields": {
+		"prefix": "mkcShields",
+		"description": "HTML for centered shields",
+		"body": [
+			"<p align=\"center\">",
+			"\t<img alt=\"Lines of code\" src=\"https://img.shields.io/tokei/lines/github/${1:user}/${2:repo}?color=yellow&label=Lines%20of%20code\">",
+			"\t<img alt=\"GitHub commits since latest release (by date)\" src=\"https://img.shields.io/github/commits-since/$1/$2/latest?color=yellow&label=Commits%20since%20last%20release\">",
+			"\t<img alt=\"GitHub\" src=\"https://img.shields.io/github/license/$1/$2?color=yellow&label=License\">",
+			"</p>"
+		]
+	},
 	// Usual writing for GitHub ========================================================================================
 	"Block of code": {
 		// Input a block of code in a markdown file.
@@ -25,7 +49,7 @@
 		"prefix": "mkShields",
 		"description": "Insert 3 shields for the repositorie's README",
 		"body": [
-			"[![GitHub repo size](https://img.shields.io/github/repo-size/${1:user}/${2:repository}?color=yellow&label=Repository%20Size)](https://github.com/$1/$2)",
+			"[![Lines of code](https://img.shields.io/tokei/lines/github/${1:user}/${2:repo}?color=yellow&label=Lines%20of%20code)](https://github.com/$1/$2)",
 			"[![GitHub commits since latest release (by date)](https://img.shields.io/github/commits-since/$1/$2/latest?color=yellow&label=Commits%20since%20last%20release)](https://github.com/$1/$2/commits)",
 			"[![GitHub](https://img.shields.io/github/license/$1/$2?color=yellow&label=License)](LICENSE)"
 		]
@@ -38,7 +62,7 @@
 		"description": "Start a changelog with all the info you may want to write",
 		"body": [
 			"# Change log\n",
-			"All significant changes to **PopOS Start** will be documented here\n",
+			"All significant changes to **${WORKSPACE_NAME}** will be documented here\n",
 			"1. [Unreleased](#Unreleased)",
 			"1. [Released](#Released)",
 			"1. [Pre Releases](#Pre-Releases)\n",
