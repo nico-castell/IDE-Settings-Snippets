@@ -6,6 +6,10 @@
     "terminal.integrated.cwd": "${fileDirname}",
     "terminal.integrated.shell.windows": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
     "terminal.integrated.fontFamily": "Hack, monospace",
+    "terminal.integrated.shellArgs.windows": [
+        "-nol",
+        "-i"
+    ],
     "settingsSync.ignoredSettings": [
         "terminal.integrated.fontFamily"
     ],
@@ -76,7 +80,7 @@
         "editor.tabSize": 2
     },
     "[markdown]": {
-        "editor.wordWrap": "on",
+        "editor.wordWrap": "off",
         "editor.quickSuggestions": true
     },
     "[csharp]": {
@@ -206,5 +210,5 @@
     "material-icon-theme.folders.associations": {
         "dbg": "Debug",
         "about": "Docs"
-    }
+    },
 }

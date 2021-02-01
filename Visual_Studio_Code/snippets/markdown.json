@@ -20,11 +20,13 @@
 		"prefix": "mkcShields",
 		"description": "HTML for centered shields",
 		"body": [
+			"<--! #region Shields -->",
 			"<p align=\"center\">",
 			"\t<img alt=\"Lines of code\" src=\"https://img.shields.io/tokei/lines/github/${1:user}/${2:repo}?color=yellow&label=Lines%20of%20code\">",
 			"\t<img alt=\"GitHub commits since latest release (by date)\" src=\"https://img.shields.io/github/commits-since/$1/$2/latest?color=yellow&label=Commits%20since%20last%20release\">",
 			"\t<img alt=\"GitHub\" src=\"https://img.shields.io/github/license/$1/$2?color=yellow&label=License\">",
-			"</p>"
+			"</p>",
+			"<--! #endregion -->"
 		]
 	},
 	// Usual writing for GitHub ========================================================================================
@@ -41,7 +43,7 @@
 	"Repo licensing": {
 		// Choose between licenses.
 		"prefix": "repolicense",
-		"body": "## License\n\nThis repository is available under the ${1|[MIT License](LICENSE),[BSD-2-Clause License](LICENSE),[BSD-3-Clause](LICENSE),[Apache License\\, version 2](LICENSE),[GNU GPL 3.0](LICENSE)|}.",
+		"body": "## License\n\nThis repository is available under the [${1|MIT License,BSD-2-Clause License,BSD-3-Clause License,Apache License,GNU GPL 3.0 License,GNU GPL 2.0 License|}](LICENSE).",
 		"description": "Choose a license to show in a README.md file"
 	},
 	"Add shields": {
@@ -49,9 +51,11 @@
 		"prefix": "mkShields",
 		"description": "Insert 3 shields for the repositorie's README",
 		"body": [
+			"<!-- #region Shields -->",
 			"[![Lines of code](https://img.shields.io/tokei/lines/github/${1:user}/${2:repo}?color=yellow&label=Lines%20of%20code)](https://github.com/$1/$2)",
 			"[![GitHub commits since latest release (by date)](https://img.shields.io/github/commits-since/$1/$2/latest?color=yellow&label=Commits%20since%20last%20release)](https://github.com/$1/$2/commits)",
-			"[![GitHub](https://img.shields.io/github/license/$1/$2?color=yellow&label=License)](LICENSE)"
+			"[![GitHub](https://img.shields.io/github/license/$1/$2?color=yellow&label=License)](LICENSE)",
+			"<!-- #endregion -->"
 		]
 	},
 	// CHANGELOG =======================================================================================================
@@ -103,7 +107,7 @@
 	// Regions =========================================================================================================
 	"Region": {
 		"prefix": "region",
-		"body": "<!--#region ${1:Region_Name} -->\n\n$0\n\n<!--#endregion $1 -->",
+		"body": "<!--#region ${1:Region_Name} -->\n${TM_SELECTED_TEXT}$0\n<!--#endregion $1 -->",
 		"description": "Make a folding region."
 	}
 }
