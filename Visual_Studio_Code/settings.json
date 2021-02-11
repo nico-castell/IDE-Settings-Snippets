@@ -4,112 +4,20 @@
     // Terminal settings:
     "terminal.integrated.cursorStyle": "underline",
     "terminal.integrated.cwd": "${fileDirname}",
-    "terminal.integrated.shell.windows": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
-    "terminal.integrated.fontFamily": "Hack, monospace",
+    "terminal.integrated.shell.windows": "C:/Program Files/PowerShell/7/pwsh.exe",
     "terminal.integrated.shellArgs.windows": [
-        "-nol",
-        "-i"
+        "-nol", // No logo at the beginning.
+        "-i" // Force interactive.
     ],
+    "terminal.integrated.fontFamily": "Hack, monospace",
     "settingsSync.ignoredSettings": [
         "terminal.integrated.fontFamily"
     ],
-    // Debugger settings:
-    "debug.onTaskErrors": "abort",
-    "debug.console.closeOnEnd": true,
-    "debug.toolBarLocation": "docked",
-    "debug.openDebug": "openOnSessionStart",
-    "debug.openExplorerOnEnd": true,
-    "terminal.external.windowsExec": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
-    // Practical settings:
-    "explorer.confirmDelete": false,
-    "explorer.confirmDragAndDrop": false,
-    "breadcrumbs.enabled": true,
-    // Window & Layout
-    "window.zoomLevel": -1,
-    // Editor
-    // "editor.fontFamily": "Cascadia ,'Cascadia Code', monospace",
-    "editor.fontSize": 12,
-    "editor.minimap.enabled": true,
-    "editor.tabCompletion": "on",
-    "editor.padding.bottom": 40,
-    "editor.renderControlCharacters": false,
-    "editor.renderLineHighlight": "all",
-    "editor.rulers": [
-        78,
-        120
-    ],
-    "editor.showFoldingControls": "always",
-    "editor.scrollBeyondLastLine": false,
-    "editor.cursorSmoothCaretAnimation": true,
-    "editor.smoothScrolling": true,
-    "editor.renderWhitespace": "trailing",
-    // Workbench
-    "workbench.colorTheme": "One Dark Pro",
-    "workbench.editor.restoreViewState": false,
-    "workbench.iconTheme": "material-icon-theme",
-    "workbench.statusBar.visible": true,
-    "workbench.startupEditor": "none",
-    // "workbench.panel.defaultLocation": "bottom",
-    // File settings:
-    "files.autoSave": "afterDelay",
-    "files.autoSaveDelay": 5000,
-    "files.eol": "\n", // Defaul end of line. (LF)
-    "files.insertFinalNewline": true,
-    "files.associations": {
-        "*.snippet": "xml",
-        "*.txt": "plaintext"
-    },
-    "files.exclude": {
-        "**/.git": true,
-        "**/.~*": true,
-        "**/*.db": true,
-        "**/*.ini": true,
-        "**/*.url": true
-    },
-    // By-Language settings:
-    "[java]": {
-        "editor.rulers": [
-            78,
-            128
-        ]
-    },
-    "[xml]": {
-        "editor.tabSize": 2
-    },
-    "[html]": {
-        "editor.tabSize": 2
-    },
-    "[markdown]": {
-        "editor.wordWrap": "off",
-        "editor.quickSuggestions": true
-    },
-    "[csharp]": {
-        "editor.rulers": [
-            78,
-            132
-        ],
-        "editor.codeLens": false
-    },
-    "[makefile]": {
-        "editor.insertSpaces": false,
-        "editor.tabSize": 2
-    },
-    "[plaintext]": {
-        "editor.tabSize": 2
-    },
-    "[reg]": {
-        "editor.tabSize": 2
-    },
-    // Git Settings:
-    "git.confirmSync": false,
-    "git.autofetch": true,
-    // Ignore extensions.
     "settingsSync.ignoredExtensions": [
-        "ms-vscode-remote.remote-wsl",
+        "ms-vscode-remove.remote-wsl",
         "ms-vscode.powershell",
         "dbaeumer.vscode-eslint"
     ],
-    // Shell launcher extension settings:
     "shellLauncher.shells.windows": [
         {
             "shell": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
@@ -165,9 +73,56 @@
             "label": "Python 3"
         }
     ],
-    // BashIDE extension settings:
-    "bashIde.explainshellEndpoint": "http://localhost:5000",
-    // GitLens extension settings:
+    // Window and appearance settings:
+    "window.zoomLevel": -1,
+    "workbench.startupEditor": "none",
+    "workbench.colorTheme": "One Dark Pro",
+    "workbench.iconTheme": "material-icon-theme",
+    "material-icon-theme.folders.theme": "specific",
+    "material-icon-theme.folders.color": "#a69f1c",
+    "material-icon-theme.folders.associations": {
+        "dbg": "Debug",
+        "about": "Docs"
+    },
+    "todo-tree.tree.showScanModeButton": true,
+    "todo-tree.tree.tagsOnly": true,
+    // Files and editor settings:
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.incrementalNaming": "smart",
+    "editor.fontSize": 12,
+    "editor.tabCompletion": "onlySnippets",
+    "editor.renderLineHighlight": "all",
+    "editor.scrollBeyondLastLine": false,
+    "editor.padding.bottom": 40,
+    "editor.smoothScrolling": true,
+    "editor.cursorSmoothCaretAnimation": true,
+    "editor.renderWhitespace": "trailing",
+    "editor.rulers": [
+        78,
+        120
+    ],
+    "editor.formatOnPaste": true,
+    "editor.formatOnType": true,
+    "editor.formatOnSave": true,
+    "diffEditor.renderSideBySide": false,
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 5000,
+    "files.insertFinalNewline": true,
+    "files.associations": {
+        "*.snippet": "xml"
+    },
+    "files.exclude": {
+        "**/.git": true, // Git folder.
+        "**/.~*": true, // Windows temp file.
+        "**/.*~": true, // UNIX temp file.
+        "**/*.db": true, // Windows "I don't know what it does" file.
+        "**/*.ini": true, // Windows folder properties.
+        "**/*.url": true // Windows internet shortcut.
+    },
+    // Version control settings:
+    "git.confirmSync": false,
+    "git.autofetch": true,
     "gitlens.codeLens.enabled": false,
     "gitlens.currentLine.enabled": false,
     "gitlens.hovers.currentLine.over": "line",
@@ -178,37 +133,54 @@
     "gitlens.views.remotes.files.layout": "tree",
     "gitlens.views.searchAndCompare.files.layout": "tree",
     "gitlens.views.tags.files.layout": "tree",
-    "gitlens.codeLens.scopes": [
-        "document",
-        "containers"
-    ],
-    // PowerShell extension settings:
-    "powershell.powerShellDefaultVersion": "PowerShell (x64)",
-    "workbench.activityBar.visible": true,
-    "diffEditor.renderSideBySide": false,
-    "editor.suggestSelection": "first",
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "java.configuration.checkProjectSettingsExclusions": false,
-    // Python extension settings:
-    "python.languageServer": "Pylance",
-    "python.showStartPage": false,
-    // RemoteSSH extension settings:
-    "remote.SSH.configFile": "/home/nicolas/.ssh/vs_config",
-    // Todo tree extensions settings:
-    "todo-tree.tree.showScanModeButton": false,
     "gitlens.gitCommands.skipConfirmations": [
         "fetch:command",
         "stash-push:command",
         "switch:command",
         "branch-create:command"
     ],
-    // "xml.java.home": "C:\\Program Files\\Java\\jre1.8.0_281"
-    "xml.java.home": "/usr/",
-    // Material Icons extension settings:
-    "material-icon-theme.folders.theme": "specific",
-    "material-icon-theme.folders.color": "#a69f1c",
-    "material-icon-theme.folders.associations": {
-        "dbg": "Debug",
-        "about": "Docs"
+    // Connecting to remotes settings:
+    "remote.SSH.configFile": "$HOME/.ssh/vs_config",
+    // Language specific settings:
+    // C family settings:
+    "[cpp]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools"
     },
+    "C_Cpp.clang_format_style": "file", // Use custom .clang-config
+    "[makefile]": {
+        "editor.insertSpaces": false,
+        "editor.tabSize": 2
+    },
+    "[csharp]": {
+        "editor.rulers": [
+            78,
+            132 // Adjust custom limit to take into account normal indentation.
+        ],
+        "editor.codeLens": false
+    },
+    "vsintellicode.modify.editor.suggestSelection": "disabled",
+    // Java settings:
+    "java.configuration.checkProjectSettingsExclusions": false,
+    // Markup settings:
+    "[xml]": {
+        "editor.tabSize": 2
+    },
+    "xml.java.home": "/usr/",
+    // "xml.java.home": "C:/Program Files/Java/jre1.8.0_281",
+    "[html]": {
+        "editor.tabSize": 2
+    },
+    // System scripts settings:
+    "[reg]": {
+        "editor.tabSize": 2
+    },
+    "bashIde.explainshellEndpoint": "http://localhost:5000",
+    "powershell.powerShellDefaultVersion": "PowerShell (x64)",
+    // Python settings:
+    "python.languageServer": "Pylance",
+    "python.showStartPage": false,
+    // Plain text settings:
+    "[plaintext]": {
+        "editor.tabSize": 2
+    }
 }

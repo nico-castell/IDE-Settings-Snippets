@@ -26,7 +26,7 @@
 	// Region statements ===============================================================================================
 	"Region": {
 		"prefix": "fregion",
-		"body": "#pragma region ${1:Region_Name}\n\n$0\n\n#pragma endregion $1",
+		"body": "#pragma region ${1:Region_Name}\n${TM_SELECTED_TEXT}$0\n#pragma endregion $1",
 		"description": "Make a folding region."
 	},
 	// Headers and includes ============================================================================================

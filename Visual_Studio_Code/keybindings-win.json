@@ -20,6 +20,10 @@
         "key": "ctrl+[Semicolon]",
         "command": "workbench.action.terminal.focus"
     },
+    {
+        "key": "ctrl+shift+[semicolon]",
+        "command": "workbench.action.toggleMaximizedPanel"
+    },
     // Insert Snippet ==================================================================================================
     {
         "key": "ctrl+alt+j",

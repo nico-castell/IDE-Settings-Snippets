@@ -9,7 +9,7 @@
 		"description": "HTML for a centered title with a logo",
 		"body": [ "<h1 align=\"center\">",
 		"\t<br>",
-		"\t\t<img src=\"$0\">",
+		"\t\t<img src=\"$0\" width=\"220\" height=\"220\">",
 		"\t<br><br>",
 		"\t${1:Title}",
 		"\t<br>",
@@ -20,13 +20,13 @@
 		"prefix": "mkcShields",
 		"description": "HTML for centered shields",
 		"body": [
-			"<--! #region Shields -->",
+			"<!-- #region Shields -->",
 			"<p align=\"center\">",
 			"\t<img alt=\"Lines of code\" src=\"https://img.shields.io/tokei/lines/github/${1:user}/${2:repo}?color=yellow&label=Lines%20of%20code\">",
 			"\t<img alt=\"GitHub commits since latest release (by date)\" src=\"https://img.shields.io/github/commits-since/$1/$2/latest?color=yellow&label=Commits%20since%20last%20release\">",
 			"\t<img alt=\"GitHub\" src=\"https://img.shields.io/github/license/$1/$2?color=yellow&label=License\">",
 			"</p>",
-			"<--! #endregion -->"
+			"<!-- #endregion -->"
 		]
 	},
 	// Usual writing for GitHub ========================================================================================
