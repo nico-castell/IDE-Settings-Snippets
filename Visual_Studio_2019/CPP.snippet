@@ -222,6 +222,72 @@ $type$ $name$($T$ $pname$)
 	<CodeSnippet Format="1.0.0">
 		<Header>
 			<Author>nico-castell</Author>
+			<Description>Make a shared smart pointer</Description>
+			<Shortcut>mkSharedPointer</Shortcut>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+			<Title>Make Shared Pointer</Title>
+		</Header>
+		<Snippet>
+			<Imports>
+				<Import>
+					<Namespace>memory</Namespace>
+				</Import>
+			</Imports>
+			<Declarations>
+				<Literal>
+					<ID>obj</ID>
+					<Tooltip>The data type</Tooltip>
+					<Default>int</Default>
+				</Literal>
+				<Literal>
+					<ID>name</ID>
+					<Tooltip>The name of the object</Tooltip>
+					<Default>Int</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="CPP">
+				<![CDATA[std::shared_ptr<$obj$> sp$name$ = std::make_shared<$obj$>$end$]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Author>nico-castell</Author>
+			<Description>Make a unique smart pointer</Description>
+			<Shortcut>mkUniquePointer</Shortcut>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+			<Title>Make a unique pointer</Title>
+		</Header>
+		<Snippet>
+			<Imports>
+				<Import>
+					<Namespace>memory</Namespace>
+				</Import>
+			</Imports>
+			<Declarations>
+				<Literal>
+					<ID>obj</ID>
+					<Tooltip>The data type</Tooltip>
+					<Default>int</Default>
+				</Literal>
+				<Literal>
+					<ID>name</ID>
+					<Tooltip>The name of the object</Tooltip>
+					<Default>Int</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="CPP">
+				<![CDATA[std::unique_prt<$obj$> up$name$ = std::make_unique<$obj$>$end$]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Author>nico-castell</Author>
 			<Description>Pass CLI arguments to the program</Description>
 			<Shortcut>argcv</Shortcut>
 			<SnippetTypes>
