@@ -5,11 +5,11 @@
     "terminal.integrated.cursorStyle": "underline",
     "terminal.integrated.cwd": "${fileDirname}",
     "terminal.integrated.shell.windows": "C:/Program Files/PowerShell/7/pwsh.exe",
+    "terminal.integrated.fontFamily": "Hack, monospace",
     "terminal.integrated.shellArgs.windows": [
         "-nol", // No logo at the beginning.
         "-i" // Force interactive.
     ],
-    "terminal.integrated.fontFamily": "Hack, monospace",
     "settingsSync.ignoredSettings": [
         "terminal.integrated.fontFamily"
     ],
@@ -73,8 +73,6 @@
             "label": "Python 3"
         }
     ],
-    // Window and appearance settings:
-    "window.zoomLevel": -1,
     "workbench.startupEditor": "none",
     "workbench.colorTheme": "One Dark Pro",
     "workbench.iconTheme": "material-icon-theme",
@@ -90,6 +88,8 @@
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
     "explorer.incrementalNaming": "smart",
+    "window.zoomLevel": -1,
+    "editor.foldingHighlight": false,
     "editor.fontSize": 12,
     "editor.tabCompletion": "onlySnippets",
     "editor.renderLineHighlight": "all",
@@ -106,6 +106,7 @@
     "editor.formatOnType": true,
     "editor.formatOnSave": true,
     "diffEditor.renderSideBySide": false,
+    "workbench.editor.restoreViewState": false,
     "files.autoSave": "afterDelay",
     "files.autoSaveDelay": 5000,
     "files.insertFinalNewline": true,
@@ -123,6 +124,9 @@
     // Version control settings:
     "git.confirmSync": false,
     "git.autofetch": true,
+    "git.smartCommitChanges": "tracked",
+    "git.enableSmartCommit": true,
+    "git.pruneOnFetch": true,
     "gitlens.codeLens.enabled": false,
     "gitlens.currentLine.enabled": false,
     "gitlens.hovers.currentLine.over": "line",
@@ -139,8 +143,13 @@
         "switch:command",
         "branch-create:command"
     ],
+    // Debugging settings:
+    "debug.onTaskErrors": "abort",
+    "debug.openDebug": "openOnSessionStart",
+    "debug.openExplorerOnEnd": true,
+    "debug.toolBarLocation": "docked",
     // Connecting to remotes settings:
-    "remote.SSH.configFile": "$HOME/.ssh/vs_config",
+    "remote.SSH.configFile": "/home/nicolas/.ssh/vs_config",
     // Language specific settings:
     // C family settings:
     "[cpp]": {
