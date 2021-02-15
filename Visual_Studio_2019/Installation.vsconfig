@@ -104,6 +104,7 @@
     "Microsoft.VisualStudio.Workload.NativeCrossPlat",
     "Microsoft.VisualStudio.Workload.NetCoreTools",
     "Microsoft.NetCore.ComponentGroup.DevelopmentTools.2.1",
-    "Microsoft.Component.ClickOnce"
+    "Microsoft.Component.ClickOnce",
+    "Microsoft.Net.Component.4.7.1.SDK"
   ]
 }
