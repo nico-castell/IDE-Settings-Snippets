@@ -73,6 +73,7 @@
             "label": "Python 3"
         }
     ],
+    "window.zoomLevel": -1,
     "workbench.startupEditor": "none",
     "workbench.colorTheme": "One Dark Pro",
     "workbench.iconTheme": "material-icon-theme",
@@ -88,24 +89,25 @@
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
     "explorer.incrementalNaming": "smart",
-    "window.zoomLevel": -1,
     "editor.foldingHighlight": false,
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
     "editor.fontSize": 12,
     "editor.tabCompletion": "onlySnippets",
     "editor.renderLineHighlight": "all",
+    "editor.showFoldingControls": "always",
+    "editor.renderIndentGuides": true,
     "editor.scrollBeyondLastLine": false,
     "editor.padding.bottom": 40,
     "editor.smoothScrolling": true,
     "editor.cursorSmoothCaretAnimation": true,
     "editor.renderWhitespace": "trailing",
     "editor.rulers": [
-        78,
-        120
+        78
     ],
     "editor.formatOnPaste": true,
     "editor.formatOnType": true,
     "editor.formatOnSave": true,
-    "diffEditor.renderSideBySide": false,
     "workbench.editor.restoreViewState": false,
     "files.autoSave": "afterDelay",
     "files.autoSaveDelay": 5000,
@@ -153,9 +155,25 @@
     // Language specific settings:
     // C family settings:
     "[cpp]": {
-        "editor.defaultFormatter": "ms-vscode.cpptools"
+        "editor.defaultFormatter": "ms-vscode.cpptools",
+        "editor.rulers": [
+            120
+        ]
     },
     "C_Cpp.clang_format_style": "file", // Use custom .clang-config
+    "cmake.revealLog": "never",
+    "cmake.configureOnOpen": true,
+    "doxdocgen.c.triggerSequence": "///",
+    "doxdocgen.c.commentPrefix": "/// ",
+    "doxdocgen.c.firstLine": "",
+    "doxdocgen.c.lastLine": "",
+    "doxdocgen.generic.order": [
+        "brief",
+        "tparam",
+        "param",
+        "return",
+        "custom"
+    ],
     "[makefile]": {
         "editor.insertSpaces": false,
         "editor.tabSize": 2
