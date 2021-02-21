@@ -2,10 +2,10 @@
     // Privacy settings:
     "telemetry.enableTelemetry": false,
     // Terminal settings:
+    "terminal.integrated.fontFamily": "Hack",
     "terminal.integrated.cursorStyle": "underline",
     "terminal.integrated.cwd": "${fileDirname}",
     "terminal.integrated.shell.windows": "C:/Program Files/PowerShell/7/pwsh.exe",
-    "terminal.integrated.fontFamily": "Hack, monospace",
     "terminal.integrated.shellArgs.windows": [
         "-nol", // No logo at the beginning.
         "-i" // Force interactive.
@@ -13,84 +13,30 @@
     "settingsSync.ignoredSettings": [
         "terminal.integrated.fontFamily"
     ],
-    "settingsSync.ignoredExtensions": [
-        "ms-vscode-remove.remote-wsl",
-        "ms-vscode.powershell",
-        "dbaeumer.vscode-eslint"
-    ],
-    "shellLauncher.shells.windows": [
-        {
-            "shell": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
-            "label": "PowerShell 7",
-            "launchName": "pwsh"
-        },
-        {
-            "shell": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
-            "label": "Windows PowerShell",
-            "launchName": "Win PowerShell"
-        },
-        {
-            "shell": "C:\\Windows\\System32\\cmd.exe",
-            "label": "cmd"
-        },
-        {
-            "shell": "C:\\Program Files\\Git\\bin\\bash.exe",
-            "label": "Git bash"
-        },
-        {
-            "shell": "C:\\Windows\\System32\\bash.exe",
-            "label": "WSL Bash"
-        }
-    ],
-    "shellLauncher.shells.linux": [
-        {
-            "shell": "/bin/zsh",
-            "label": "zsh"
-        },
-        {
-            "shell": "/bin/bash",
-            "label": "bash"
-        },
-        {
-            "shell": "zsh",
-            "args": [
-                "-l"
-            ],
-            "label": "zsh login shell"
-        },
-        {
-            "shell": "bash",
-            "args": [
-                "-l"
-            ],
-            "label": "bash login shell"
-        },
-        {
-            "shell": "/usr/bin/python3",
-            "args": [
-                "-q"
-            ],
-            "label": "Python 3"
-        }
-    ],
-    "window.zoomLevel": -1,
     "workbench.startupEditor": "none",
-    "workbench.colorTheme": "One Dark Pro",
+    // Appearance settings:
+    "window.zoomLevel": -1,
     "workbench.iconTheme": "material-icon-theme",
+    "workbench.productIconTheme": "icons-carbon",
+    "workbench.colorTheme": "One Dark Pro",
     "material-icon-theme.folders.theme": "specific",
     "material-icon-theme.folders.color": "#a69f1c",
     "material-icon-theme.folders.associations": {
         "dbg": "Debug",
         "about": "Docs"
     },
-    "todo-tree.tree.showScanModeButton": true,
+    "material-icon-theme.files.associations": {
+        "CMakeLists.txt.in": "CMake"
+    },
+    "todo-tree.tree.showScanModeButton": false,
     "todo-tree.tree.tagsOnly": true,
     // Files and editor settings:
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
     "explorer.incrementalNaming": "smart",
     "editor.foldingHighlight": false,
-    "editor.fontFamily": "Fira Code",
+    // "editor.fontFamily": "Fira Code",
+    "editor.fontFamily": "'Fira Code', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
     "editor.fontLigatures": true,
     "editor.fontSize": 12,
     "editor.tabCompletion": "onlySnippets",
@@ -106,8 +52,8 @@
         78
     ],
     "editor.formatOnPaste": true,
-    "editor.formatOnType": true,
     "editor.formatOnSave": true,
+    "diffEditor.renderSideBySide": false,
     "workbench.editor.restoreViewState": false,
     "files.autoSave": "afterDelay",
     "files.autoSaveDelay": 5000,
@@ -129,6 +75,7 @@
     "git.smartCommitChanges": "tracked",
     "git.enableSmartCommit": true,
     "git.pruneOnFetch": true,
+    "git.autoRepositoryDetection": "subFolders",
     "gitlens.codeLens.enabled": false,
     "gitlens.currentLine.enabled": false,
     "gitlens.hovers.currentLine.over": "line",
@@ -174,10 +121,17 @@
         "return",
         "custom"
     ],
+    "testMate.cpp.log.logSentry": "enable",
     "[makefile]": {
         "editor.insertSpaces": false,
         "editor.tabSize": 2
     },
+    "[markdown]": {
+        "editor.wordWrap": "on",
+        "editor.quickSuggestions": true
+    },
+    "markdown.preview.scrollEditorWithPreview": false,
+    "markdown.preview.scrollPreviewWithEditor": false,
     "[csharp]": {
         "editor.rulers": [
             78,
@@ -185,15 +139,10 @@
         ],
         "editor.codeLens": false
     },
-    "vsintellicode.modify.editor.suggestSelection": "disabled",
-    // Java settings:
-    "java.configuration.checkProjectSettingsExclusions": false,
     // Markup settings:
     "[xml]": {
         "editor.tabSize": 2
     },
-    "xml.java.home": "/usr/",
-    // "xml.java.home": "C:/Program Files/Java/jre1.8.0_281",
     "[html]": {
         "editor.tabSize": 2
     },

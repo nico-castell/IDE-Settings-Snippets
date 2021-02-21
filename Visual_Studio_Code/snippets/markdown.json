@@ -7,13 +7,14 @@
 	"Centered title": {
 		"prefix": "mkTitle",
 		"description": "HTML for a centered title with a logo",
-		"body": [ "<h1 align=\"center\">",
-		"\t<br>",
-		"\t\t<img src=\"$0\" width=\"220\" height=\"220\">",
-		"\t<br><br>",
-		"\t${1:Title}",
-		"\t<br>",
-		"</h1>"
+		"body": [
+			"<h1 align=\"center\">",
+			"\t<br>",
+			"\t\t<img src=\"$0\" width=\"220\" height=\"220\">",
+			"\t<br><br>",
+			"\t${1:Title}",
+			"\t<br>",
+			"</h1>"
 		]
 	},
 	"Centered shields": {
@@ -34,7 +35,7 @@
 		// Input a block of code in a markdown file.
 		"prefix": "mkCode",
 		"body": [
-			"```${1|bash,c,cpp,csharp,go,html,http,java,javascript,json,makefile,markdown,powershell,php,python,shell,sql,xml,yaml|}",
+			"```${1|bash,c,cpp,cmake,csharp,go,html,http,java,javascript,json,makefile,markdown,powershell,php,python,shell,sql,xml,yaml|}",
 			"${TM_SELECTED_TEXT}$0",
 			"```"
 		],
