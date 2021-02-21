@@ -1,7 +1,5 @@
-// These are XML formatting extensions
 {
     "recommendations": [
-        "redhat.vscode-xml", // Relies on Java
-        // "dotjoshjohnson.xml" // Does not rely on Java, but it's not as good
-    ],
+        "redhat.vscode-xml" // Support for XML schemas
+    ]
 }

@@ -4,7 +4,6 @@
     .NOTES
         Author: nico-castell
 #>
-# This script was written by nico-castell.
 
 [CmdletBinding()]
 param ()
