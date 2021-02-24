@@ -105,6 +105,37 @@
 			"#### Removed",
 		]
 	},
+	// CONTRIBUTING ====================================================================================================
+	"Start Contribution Guidelines": {
+		// A template to write contribution guidelines.
+		"prefix": "start-contributiong",
+		"description": "A basic template to start writing contribution guidelines",
+		"body": [
+			"# Contributing to *Project*\n",
+			"Let me start by saying: **Thank you for taking the time to contribute!**\n",
+			"These are a few guidelines for contributing to this project.\n",
+			"### Table of contents",
+			"- [About](#about)",
+			"  - [The project](#the-project)",
+			"  - [Branches](#branches)",
+			"  - [License](#license)",
+			"- [Before you start](#before-you-start)",
+			"- [Questions](#questions)",
+			"- [Reporting bugs](#reporting-bugs)",
+			"- [Requesting features](#requesting-features)\n",
+			"## About\n",
+			"### The project\n$0\n",
+			"### Branches\n",
+			"### License\n",
+			"---",
+			"## Before you start\n",
+			"## Questions\n",
+			"## Reporting bugs\n",
+			"## Requesting features\n",
+			"---",
+			"**PS:**"
+		]
+	},
 	// Regions =========================================================================================================
 	"Region": {
 		"prefix": "region",

@@ -13,7 +13,7 @@
     "settingsSync.ignoredSettings": [
         "terminal.integrated.fontFamily"
     ],
-    "workbench.startupEditor": "none",
+    "workbench.startupEditor": "readme",
     // Appearance settings:
     "window.zoomLevel": -1,
     "workbench.iconTheme": "material-icon-theme",
@@ -132,6 +132,7 @@
     },
     "markdown.preview.scrollEditorWithPreview": false,
     "markdown.preview.scrollPreviewWithEditor": false,
+    "markdown.extension.toc.levels": "2..4",
     "[csharp]": {
         "editor.rulers": [
             78,

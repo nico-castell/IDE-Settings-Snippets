@@ -105,7 +105,16 @@
         "command": "cmake.debugTarget",
         "when": "cmake:enableFullFeatureSet && inCMakeProject && !cmake:hideDebugCommand && !inDebugMode"
     },
-    // Inspect Editor Tokens and Scopes ================================================================================
+    // Change language in editor =======================================================================================
+    {
+        "key": "ctrl+k ctrl+m",
+        "command": "workbench.action.editor.changeLanguageMode"
+    },
+    {
+        "key": "ctrl+k m",
+        "command": "-workbench.action.editor.changeLanguageMode"
+    },
+    // vscode developer settings =======================================================================================
     {
         "key": "ctrl+alt+shift+i",
         "command": "editor.action.inspectTMScopes"
