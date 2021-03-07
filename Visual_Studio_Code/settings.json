@@ -1,8 +1,6 @@
 {
     // Privacy settings:
     "telemetry.enableTelemetry": false,
-    // Terminal settings:
-    "terminal.integrated.fontFamily": "Hack",
     "terminal.integrated.cursorStyle": "underline",
     "terminal.integrated.cwd": "${fileDirname}",
     "terminal.integrated.shell.windows": "C:/Program Files/PowerShell/7/pwsh.exe",
@@ -10,15 +8,11 @@
         "-nol", // No logo at the beginning.
         "-i" // Force interactive.
     ],
-    "settingsSync.ignoredSettings": [
-        "terminal.integrated.fontFamily"
-    ],
+	"terminal.integrated.fontFamily": "Hack, monospace",
     "workbench.startupEditor": "readme",
-    // Appearance settings:
-    "window.zoomLevel": -1,
-    "workbench.iconTheme": "material-icon-theme",
-    "workbench.productIconTheme": "icons-carbon",
-    "workbench.colorTheme": "One Dark Pro",
+	"workbench.iconTheme": "material-icon-theme",
+	"workbench.colorTheme": "Atom One Dark",
+	"window.zoomLevel": -1,
     "material-icon-theme.folders.theme": "specific",
     "material-icon-theme.folders.color": "#a69f1c",
     "material-icon-theme.folders.associations": {
@@ -31,6 +25,7 @@
     "todo-tree.tree.showScanModeButton": false,
     "todo-tree.tree.tagsOnly": true,
     // Files and editor settings:
+    "workbench.settings.editor": "json",
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
     "explorer.incrementalNaming": "smart",
@@ -43,6 +38,8 @@
     "editor.renderLineHighlight": "all",
     "editor.showFoldingControls": "always",
     "editor.renderIndentGuides": true,
+    "editor.insertSpaces": false,
+    "editor.detectIndentation": false,
     "editor.scrollBeyondLastLine": false,
     "editor.padding.bottom": 40,
     "editor.smoothScrolling": true,
@@ -73,6 +70,8 @@
     "git.confirmSync": false,
     "git.autofetch": true,
     "git.smartCommitChanges": "tracked",
+    "git.allowForcePush": true,
+    "git.confirmForcePush": false,
     "git.enableSmartCommit": true,
     "git.pruneOnFetch": true,
     "git.autoRepositoryDetection": "subFolders",
@@ -90,7 +89,8 @@
         "fetch:command",
         "stash-push:command",
         "switch:command",
-        "branch-create:command"
+        "branch-create:command",
+        "tag-create:command"
     ],
     // Debugging settings:
     "debug.onTaskErrors": "abort",
@@ -126,9 +126,23 @@
         "editor.insertSpaces": false,
         "editor.tabSize": 2
     },
+    "[yaml]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+        "editor.autoIndent": "advanced",
+        "gitlens.codeLens.scopes": [
+            "document"
+        ],
+        "editor.quickSuggestions": {
+            "other": true,
+            "comments": false,
+            "strings": true
+        }
+    },
     "[markdown]": {
         "editor.wordWrap": "on",
-        "editor.quickSuggestions": true
+        "editor.quickSuggestions": true,
+        "editor.insertSpaces": true
     },
     "markdown.preview.scrollEditorWithPreview": false,
     "markdown.preview.scrollPreviewWithEditor": false,
@@ -159,5 +173,7 @@
     // Plain text settings:
     "[plaintext]": {
         "editor.tabSize": 2
-    }
+    },
+	"githubPullRequests.fileListLayout": "tree",
+	"workbench.productIconTheme": "material-product-icons"
 }

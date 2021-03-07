@@ -23,9 +23,10 @@
 		"body": [
 			"<!-- #region Shields -->",
 			"<p align=\"center\">",
-			"\t<img alt=\"Lines of code\" src=\"https://img.shields.io/tokei/lines/github/${1:user}/${2:repo}?color=yellow&label=Lines%20of%20code\">",
-			"\t<img alt=\"GitHub commits since latest release (by date)\" src=\"https://img.shields.io/github/commits-since/$1/$2/latest?color=yellow&label=Commits%20since%20last%20release\">",
-			"\t<img alt=\"GitHub\" src=\"https://img.shields.io/github/license/$1/$2?color=yellow&label=License\">",
+			"    <a href=\"https://github.com/${1:user}/${2:repo}/commits\"><img alt=\"GitHub commits since latest release (by date)\" src=\"https://img.shields.io/github/commits-since/$1/$2/latest?label=Commits%20since%20last%20release&color=informational&style=flat-square\"></a>",
+			"    <a href=\"https://github.com/$1/$2/releases\"><img alt=\"GitHub release (latest by date)\" src=\"https://img.shields.io/github/v/release/$1/$2?color=informational&label=Release&style=flat-square\"></a>",
+			"    <a href=\"LICENSE\"><img alt=\"GitHub\" src=\"https://img.shields.io/github/license/$1/$2?color=informational&label=License&style=flat-square\"></a>",
+			"    <a href=\"https://github.com/$1/$2\"><img alt=\"Lines of code\" src=\"https://img.shields.io/tokei/lines/github/$1/$2?label=Lines%20of%20code&color=informational&style=flat-square\"></a>",
 			"</p>",
 			"<!-- #endregion -->"
 		]
