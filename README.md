@@ -1,5 +1,7 @@
 # Snippets and Settings
 
+[![Donate button](https://img.shields.io/static/v1?label=Donate&message=PayPal&color=informational&logo=PayPal&style=flat-square)](https://www.paypal.com/donate?hosted_button_id=C38RSCD9QGZBQ)
+
 This repository contains **snippets** and **settings** for the popular IDEs:
 
 * [Visual Studio Code](https://code.visualstudio.com/)
